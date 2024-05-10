@@ -1,0 +1,59 @@
+{
+    "en" :
+        {
+            "welcome" : "Welcome to Mortgage Calculator.",
+            "set_language" : "Please select language\nen = English\nde = German",
+            "invalid_lang" : "Language not found",
+            "invalid_amount" : "Initial amount has to be above $0.",
+            "invalid_text" : "Text values are not supported.",
+            "invalid_entry" : "Hmm... that doesn't look like a valid entry.",
+            "negative_check" : "Please enter a positive value",
+            "loan_entry" : "Please enter much loan would you like to take below?",
+            "invalid_loan_entry" : "Please enter an amount above $0 below. Do not add '$', ',' ,'-', or texts to value.",
+            "rate_entry" : "Please enter an Annual Percentage rate (APR) below",
+            "invalid_rate_entry" : "Please enter an APR rate below (e.g 5 = 5% APR or 3.5 = 3.5% APR)",
+            "year_entry" : "Please enter the duration of the loan in full years below (e.g 1 = 1 year, 2 = 2 years).",
+            "month_entry" : "Please enter the duration of the loan in full months below (eg 1 = 1 month, 14 = 14 months or 1 year and 2 months).",
+            "zero_duration" : "The entire duration(time and month) cannot both be zero",
+            "morgage_summary" : 
+                                [
+                                    "Here is your morgage summary\n",
+                                    "Mortgage Amount:                      ${cash}\n",
+                                    "Annual Precentage Rate:               {APR} %\n",
+                                    "Total duration of loan (in months):   {span} month(s)\n",
+                                    "Your Montly payment:                  ${refund} monthly\n"
+                                ],
+            "restart" : "Would you want to perform another Mortgage Calculation? (yes/no) ",
+            "invalid_answer": "Please enter 'y' for yes  or 'n' for no.",
+            "farewell" : "Thank you for using Mortgage Calculator. Have a nice day!",
+            "new_calculation": "Thank you, the Mortgage Calculator will restart now!"
+       
+        },
+
+    "de":
+        {
+            "welcome": "Willkommen beim Hypothekenrechner.",
+            "invalid_amount": "Der anfängliche Betrag muss über $0 liegen.",
+            "invalid_text": "Textwerte werden nicht unterstützt.",
+            "invalid_entry": "Hmm... das sieht nicht nach einem gültigen Eintrag aus.",
+            "negative_check": "Bitte geben Sie einen positiven Wert ein.",
+            "loan_entry": "Bitte geben Sie unten an, wie viel Kredit Sie aufnehmen möchten.",
+            "invalid_loan_entry": "Bitte geben Sie unten einen Betrag über $0 ein. Fügen Sie keinen '$', ',', '-' oder Texte zum Wert hinzu.",
+            "rate_entry": "Bitte geben Sie unten einen jährlichen Prozentsatz (APR) ein.",
+            "invalid_rate_entry": "Bitte geben Sie einen APR-Zinssatz unten ein (z.B. 5 = 5 % APR oder 3.5 = 3,5 % APR)",
+            "year_entry": "Bitte geben Sie die Laufzeit des Kredits in vollen Jahren unten ein (z.B. 1 = 1 Jahr, 2 = 2 Jahre).",
+            "month_entry": "Bitte geben Sie die Laufzeit des Kredits in vollen Monaten unten ein (z.B. 1 = 1 Monat, 14 = 14 Monate oder 1 Jahr und 2 Monate).",
+            "zero_duration": "Die gesamte Dauer (Zeit und Monat) darf nicht gleichzeitig null sein.",
+            "morgage_summary": [
+                                    "Hier ist Ihre Hypothekenzusammen fassung:\n",
+                                    "Hypothekenbetrag:                     ${cash}\n",
+                                    "Jährlicher Prozentsatz:               {APR} %\n",
+                                    "Gesamtdauer des Kredits (in Monaten): {span} Monat(e)\n",
+                                    "Ihre monatliche Zahlung:              ${refund} monatlich\n"
+                                ],
+            "restart": "Möchten Sie eine weitere Hypothekenberechnung durchführen? (ja/nein) ",
+            "invalid_answer": "Bitte geben Sie 'j' für ja oder 'n' für nein ein.",
+            "farewell": "Vielen Dank, dass Sie den Hypothekenrechner verwendet haben. Haben Sie einen schönen Tag!",
+            "new_calculation": "Vielen Dank, der Hypothekenrechner wird jetzt neu starten."
+        }
+}
