@@ -206,10 +206,10 @@ def run_mortgage_caulator(lang):
             time.sleep(3)
             clear_screen()
             break
-        else:
-            prompt(MEMO[lang]['new_calculation'])
-            time.sleep(3)
-            clear_screen()
+
+        prompt(MEMO[lang]['new_calculation'])
+        time.sleep(3)
+        clear_screen()
 
 def main():
     display_welcome()
