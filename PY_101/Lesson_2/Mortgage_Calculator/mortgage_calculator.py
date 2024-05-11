@@ -11,6 +11,8 @@ YEAR_TO_MONTHS = int(12)
 APR_CONVERSION = 0.01
 CHECK_INF = [float('inf'), -float('inf')]
 ZERO = 0
+POSITIVE_CHOICES = ['yes', 'y', 'j', 'ja']
+RESPONSE_CHOICES = ['y', 'yes','j', 'ja', 'n', 'no', 'nein']
 
 # Inserts ==> before every message
 def prompt(text):
@@ -196,12 +198,11 @@ def display_summary(credit, full_rate, time_span, repay, lang):
 
 # Returns the answer necessary to restart the mortgage calculator
 def get_another_mortgage_calculation(lang):
-    choices = ['y', 'yes','j', 'ja', 'n', 'no', 'nein']
 
     prompt(MEMO[lang]['restart'])
     response = input().strip().lower()
 
-    while response not in choices:
+    while response not in RESPONSE_CHOICES:
         if response == "":
             prompt(MEMO[lang]['invalid_answer'])
             response = input().strip().lower()
@@ -224,9 +225,8 @@ def run_mortgage_caulator(lang):
     while True:
         get_morgage_entries(lang)
         answer = get_another_mortgage_calculation(lang)
-        positive_choice = ['yes', 'y', 'j', 'ja']
 
-        if answer not in positive_choice:
+        if answer not in POSITIVE_CHOICES:
             prompt(MEMO[lang]['farewell'])
             time.sleep(3)
             clear_screen()
