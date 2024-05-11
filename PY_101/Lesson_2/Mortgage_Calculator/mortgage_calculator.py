@@ -8,7 +8,7 @@ with open('mortgage_message.json', 'r') as file:
 
 YEAR_TO_MONTHS = int(12)
 APR_CONVERSION = 0.01
-CHECK_INF_NAN = [float('inf'), -float('inf')]
+CHECK_INF = [float('inf'), -float('inf')]
 
 def prompt(text):
     print(f"==> {text}")
@@ -41,7 +41,7 @@ def check_invalid_loan_amount(number_str, lang):
         if check_num <= 0:
             prompt(MEMO[lang]['invalid_amount'])
             return True
-        if check_num in CHECK_INF_NAN:
+        if check_num in CHECK_INF:
             prompt(MEMO[lang]['invalid_text'])
             return True
     except ValueError:
@@ -56,7 +56,7 @@ def check_invalid_rate(number_str, lang):
         if check_num < 0:
             prompt(MEMO[lang]['negative_check'])
             return True
-        if check_num in CHECK_INF_NAN:
+        if check_num in CHECK_INF:
             prompt(MEMO[lang]['invalid_text'])
             return True
     except ValueError:
