@@ -10,6 +10,7 @@ with open('mortgage_message.json', 'r') as file:
 YEAR_TO_MONTHS = int(12)
 APR_CONVERSION = 0.01
 CHECK_INF = [float('inf'), -float('inf')]
+ZERO = 0
 
 # Inserts ==> before every message
 def prompt(text):
@@ -44,7 +45,7 @@ def get_language():
 def check_invalid_loan_amount(number_str, lang):
     try:
         check_num = float(number_str)
-        if check_num <= 0:
+        if check_num <= ZERO:
             prompt(MEMO[lang]['invalid_amount'])
             return True
         if check_num in CHECK_INF:
@@ -62,7 +63,7 @@ def check_invalid_loan_amount(number_str, lang):
 def check_invalid_rate(number_str, lang):
     try:
         check_num = float(number_str)
-        if check_num < 0:
+        if check_num < ZERO:
             prompt(MEMO[lang]['negative_check'])
             return True
         if check_num in CHECK_INF:
@@ -80,7 +81,7 @@ def check_invalid_rate(number_str, lang):
 def check_invalid_year(number_str, lang):
     try:
         int(number_str)
-        if int(number_str) < 0:
+        if int(number_str) < ZERO:
             prompt(MEMO[lang]['negative_check'])
             return True
     except ValueError:
@@ -92,7 +93,7 @@ def check_invalid_year(number_str, lang):
 def check_invalid_month(number_str, lang):
     try:
         int(number_str)
-        if int(number_str) < 0:
+        if int(number_str) < ZERO:
             prompt(MEMO[lang]['negative_check'])
             return True
     except ValueError:
@@ -150,7 +151,7 @@ def get_months(lang):
 
 # Converts years to months if year is > 0
 def get_years_to_months(year, month):
-    if year > 0:
+    if year > ZERO:
         entire_months = (year * YEAR_TO_MONTHS) + month
     else:
         entire_months = month
@@ -163,7 +164,7 @@ def get_total_loan_duration(lang):
     months = get_months(lang)
     total_months = get_years_to_months(years, months)
 
-    while total_months == 0:
+    while total_months == ZERO:
         prompt(MEMO[lang]['zero_duration'])
         years = get_years(lang)
         months = get_months(lang)
@@ -173,8 +174,8 @@ def get_total_loan_duration(lang):
 
 # Calculates and returns the monthly payment in 2 decimal places.
 def get_monthly_payment(loan, rates, duration):
-    if rates == 0:
-        monthly_rate = 0
+    if rates == ZERO:
+        monthly_rate = ZERO
         amount = loan / duration
     else:
         monthly_rate = (rates * APR_CONVERSION) / YEAR_TO_MONTHS
