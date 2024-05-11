@@ -1,6 +1,7 @@
 import json
 import os
 import time
+import math
 
 # Import .json file and save to dictionary to a constant
 with open('mortgage_message.json', 'r') as file:
@@ -49,6 +50,8 @@ def check_invalid_loan_amount(number_str, lang):
         if check_num in CHECK_INF:
             prompt(MEMO[lang]['invalid_text'])
             return True
+        if math.isnan(check_num):
+            raise ValueError
     except ValueError:
         prompt(MEMO[lang]['invalid_text'])
         return True
@@ -65,6 +68,8 @@ def check_invalid_rate(number_str, lang):
         if check_num in CHECK_INF:
             prompt(MEMO[lang]['invalid_text'])
             return True
+        if math.isnan(check_num):
+            raise ValueError
     except ValueError:
         prompt(MEMO[lang]['invalid_text'])
         return True
