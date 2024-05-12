@@ -15,13 +15,13 @@
             "year_entry" : "Please enter the duration of the loan in full years below (e.g 1 = 1 year, 2 = 2 years).",
             "month_entry" : "Please enter the duration of the loan in full months below (eg 1 = 1 month, 14 = 14 months or 1 year and 2 months).",
             "zero_duration" : "The entire duration(time and month) cannot both be zero",
-            "morgage_summary" : 
+            "mortgage_summary" : 
                                 [
                                     "Here is your morgage summary\n",
-                                    "Mortgage Amount:                      ${cash}\n",
-                                    "Annual Precentage Rate:               {APR} %\n",
+                                    "Mortgage Amount:                      ${cash:.2f}\n",
+                                    "Annual Precentage Rate:               {APR:.2f} %\n",
                                     "Total duration of loan (in months):   {span} month(s)\n",
-                                    "Your Montly payment:                  ${refund} monthly\n"
+                                    "Your Monthly payment:                 ${refund} monthly\n"
                                 ],
             "restart" : "Would you want to perform another Mortgage Calculation? (yes/no) ",
             "invalid_answer": "Please enter 'y' for yes  or 'n' for no.",
@@ -44,12 +44,12 @@
             "year_entry": "Bitte geben Sie die Laufzeit des Kredits in vollen Jahren unten ein (z.B. 1 = 1 Jahr, 2 = 2 Jahre).",
             "month_entry": "Bitte geben Sie die Laufzeit des Kredits in vollen Monaten unten ein (z.B. 1 = 1 Monat, 14 = 14 Monate oder 1 Jahr und 2 Monate).",
             "zero_duration": "Die gesamte Dauer (Zeit und Monat) darf nicht gleichzeitig null sein.",
-            "morgage_summary": [
+            "mortgage_summary": [
                                     "Hier ist Ihre Hypothekenzusammen fassung:\n",
-                                    "Hypothekenbetrag:                     ${cash}\n",
-                                    "Jährlicher Prozentsatz:               {APR} %\n",
+                                    "Hypothekenbetrag:                     ${cash:.2f}\n",
+                                    "Jährlicher Prozentsatz:               {APR:.2f} %\n",
                                     "Gesamtdauer des Kredits (in Monaten): {span} Monat(e)\n",
-                                    "Ihre monatliche Zahlung:              ${refund} monatlich\n"
+                                    "Ihre Monatliche Zahlung:              ${refund} monatlich\n"
                                 ],
             "restart": "Möchten Sie eine weitere Hypothekenberechnung durchführen? (ja/nein) ",
             "invalid_answer": "Bitte geben Sie 'j' für ja oder 'n' für nein ein.",
