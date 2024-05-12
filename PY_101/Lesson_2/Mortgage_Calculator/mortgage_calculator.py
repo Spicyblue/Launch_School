@@ -7,7 +7,7 @@ import math
 with open('mortgage_message.json', 'r') as file:
     MEMO = json.load(file)
 
-YEAR_TO_MONTHS = int(12)
+YEAR_TO_MONTHS = 12
 APR_CONVERSION = 0.01
 CHECK_INF = [float('inf'), -float('inf')]
 ZERO = 0
@@ -18,11 +18,9 @@ RESPONSE_CHOICES = ['y', 'yes','j', 'ja', 'n', 'no', 'nein']
 def prompt(text):
     print(f"==> {text}")
 
-# Displays welcome messsage
 def display_welcome():
     prompt(MEMO['en']['welcome'])
 
-# Clears screen
 def clear_screen():
     # for macOS and Linux
     if os.name == 'posix':
@@ -31,7 +29,7 @@ def clear_screen():
     elif os.name == 'nt':
         os.system('cls')
 
-# Define user language
+# Define user language for the application
 def get_language():
     prompt(MEMO['en']['set_language'])
     language = input().strip().lower()
@@ -43,7 +41,7 @@ def get_language():
 
     return language
 
-# Check to ensure loan input is valid
+# Checks all input data type to ensure loan input is valid
 def check_invalid_loan_amount(number_str, lang):
     try:
         check_num = float(number_str)
@@ -61,7 +59,7 @@ def check_invalid_loan_amount(number_str, lang):
 
     return False
 
-# Check to ensure rate input is valid
+# Checks all input data type to ensure rate input is valid
 def check_invalid_rate(number_str, lang):
     try:
         check_num = float(number_str)
@@ -79,7 +77,7 @@ def check_invalid_rate(number_str, lang):
 
     return False
 
-# Check to ensure year input is valid
+# Checks all input data type to ensure year input is valid
 def check_invalid_year(number_str, lang):
     try:
         int(number_str)
@@ -91,7 +89,7 @@ def check_invalid_year(number_str, lang):
 
     return False
 
-# Check to ensure month input is valid
+# Checks all input data type to ensure month input is valid
 def check_invalid_month(number_str, lang):
     try:
         int(number_str)
@@ -104,7 +102,7 @@ def check_invalid_month(number_str, lang):
     return False
 
 # Returns a valid loan amount
-def get_loan(lang):
+def ask_loan(lang):
     prompt(MEMO[lang]['loan_entry'])
     principal = input("$").strip().lower()
 
@@ -115,7 +113,7 @@ def get_loan(lang):
     return float(principal)
 
 # Returns a valid interest rate
-def get_annual_interest_rate(lang):
+def ask_annual_interest_rate(lang):
     prompt(MEMO[lang]['rate_entry'])
     interest_rate = input().strip().lower()
 
@@ -128,7 +126,7 @@ def get_annual_interest_rate(lang):
     return float(interest_rate)
 
 # Returns a valid year
-def get_years(lang):
+def ask_years(lang):
     prompt (MEMO[lang]['year_entry'])
     loan_years = input().strip()
 
@@ -140,7 +138,7 @@ def get_years(lang):
     return int(loan_years)
 
 # Returns a valid month
-def get_months(lang):
+def ask_months(lang):
     prompt(MEMO[lang]['month_entry'])
     loan_months = input().strip()
 
@@ -162,14 +160,14 @@ def get_years_to_months(year, month):
 
 # Returns the total months (including converted year(s))
 def get_total_loan_duration(lang):
-    years = get_years(lang)
-    months = get_months(lang)
+    years = ask_years(lang)
+    months = ask_months(lang)
     total_months = get_years_to_months(years, months)
 
     while total_months == ZERO:
         prompt(MEMO[lang]['zero_duration'])
-        years = get_years(lang)
-        months = get_months(lang)
+        years = ask_years(lang)
+        months = ask_months(lang)
         total_months = get_years_to_months(years, months)
 
     return total_months
@@ -190,14 +188,14 @@ def get_monthly_payment(loan, rates, duration):
 
 # Display all user input and summary after calculation
 def display_summary(credit, full_rate, time_span, repay, lang):
-    recap_info = '\n'.join(MEMO[lang]['morgage_summary'])
+    recap_info = '\n'.join(MEMO[lang]['mortgage_summary'])
     prompt(recap_info.format(cash = credit,
                                 APR = full_rate,
                                 span = time_span,
                                 refund = repay))
 
 # Returns the answer necessary to restart the mortgage calculator
-def get_another_mortgage_calculation(lang):
+def ask_another_mortgage_calculation(lang):
 
     prompt(MEMO[lang]['restart'])
     response = input().strip().lower()
@@ -212,19 +210,22 @@ def get_another_mortgage_calculation(lang):
 
     return response
 
-# Mini function to get all valid input and run calculations
-def get_morgage_entries(lang):
-    loan_amount = get_loan(lang)
-    interest_rate = get_annual_interest_rate(lang)
+# Orchestration function for required for the main function.
+def run_mortgage_calculator(lang):
+    loan_amount = ask_loan(lang)
+    interest_rate = ask_annual_interest_rate(lang)
     time_span = get_total_loan_duration(lang)
     monthly_cost = get_monthly_payment(loan_amount, interest_rate, time_span)
     display_summary(loan_amount, interest_rate, time_span, monthly_cost, lang)
 
-# loop necessary to restarts or end the mortgage calculator
-def run_mortgage_caulator(lang):
+# mini program than initites the app
+def main():
+    display_welcome()
+    lang = get_language()
+
     while True:
-        get_morgage_entries(lang)
-        answer = get_another_mortgage_calculation(lang)
+        run_mortgage_calculator(lang)
+        answer = ask_another_mortgage_calculation(lang)
 
         if answer not in POSITIVE_CHOICES:
             prompt(MEMO[lang]['farewell'])
@@ -234,12 +235,7 @@ def run_mortgage_caulator(lang):
 
         prompt(MEMO[lang]['new_calculation'])
         time.sleep(2)
-
-# mini program than initites the app
-def main():
-    display_welcome()
-    lang = get_language()
-    run_mortgage_caulator(lang)
+        clear_screen()
 
 # main function necessary for mortgage calculator to run
 main()
