@@ -1,0 +1,61 @@
+{
+    "welcome" : "Welcome to Rock Paper Scissors Lizard Spock (ROPASCLISP) Game.\n",
+    "game_intro" : [
+                        "What is ROPASCLISP\n",
+                        "ROPASCLISP is an upgraded version (V2.0) of the Rock, Paper, Scissors (ROPASC) game.\n",
+                        "It is a single player game where you compete against a virtual player.\n"
+                    ],
+    "how_to_play" : [
+                        "How to Play\n",
+                        "During game play, you get to choose between Rock, Paper, Scissors, Lizard or Spock.\n",
+                        "You can either enter type in words directly or specific letters during the game play.\n",
+                        "A round win is decided based on the following game rules.\n"                        
+                    ],
+    "game_rules" :  [
+                        "Game Rules.\n",
+                        "To win a game round, one of the following conditions must be true.\n",
+                        "Scissors cuts Paper.\n",
+                        "Paper covers Rock.\n",
+                        "Rock crushes Lizard.\n",
+                        "Lizard poisons Spock.\n",
+                        "Spock smashes Scissors.\n",
+                        "Scissors decapitates Lizard.\n",
+                        "Lizard eats Paper.\n",
+                        "Paper disproves Spock.\n",
+                        "Spock vaporizes Rock.\n",
+                        "Rock crushes Scissors.\n"
+                    ],
+    "win_rules" :   [
+                        "How to Win.\n",
+                        "The winner is the best of 5.\n",
+                        "During the start of the game, all players have a score of zero.\n",
+                        "The overall winner is the player who first gets a score of 3 (total of 3 wins).\n",
+                        "At the end of the game, you can either start a new game or end the game.\n",
+                        "Good luck in the game.\n",
+                        "Live long and prosper!\n"
+                    ], 
+    "choice" :      [
+                        "Please choose one: rock, paper, scissors, lizard, spock.\n",
+                        "==> You can also choose an abbreviation as shown below:\n",
+                        "r = rock\n",
+                        "p = paper\n",
+                        "s = scissors\n",
+                        "l = lizard\n",
+                        "sp = spock\n"
+                    ],
+    "start_game" : "Ready to start game? (yes/no)",
+    "yes_or_no" : "please enter 'yes' or 'no'\n",
+    "begin_game":  "ROPASCLISP game will start now! Get ready!!!", 
+    "invalid_choice" : "Hmm... this is not a valid answer. Please try again.",
+    "round_winner" : "You chose: {user_choice}, computer chose: {virtual_choice}\n",
+    "goodbye" : "Thank you for visiting Rock Paper Scissors Lizard Spock (ROPASCLISP) game.\n==> Live Long and Prosper.",
+    "game_summary" : [
+                        "Current score board\n",
+                        "Game round:        {board[rounds]}\n",
+                        "Player score:      {board[player]}\n",
+                        "Computer score:    {board[computer]}\n"
+                    ],
+    "winner" : "Congratulations, you won the game!!!",
+    "try_again" : "Unfortunately, computer wins, you can try again!!!"
+}
+
