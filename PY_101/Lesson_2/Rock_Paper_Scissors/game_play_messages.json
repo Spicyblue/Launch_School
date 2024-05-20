@@ -47,7 +47,10 @@
     "yes_or_no" : "please enter 'yes' or 'no'\n",
     "begin_game":  "ROPASCLISP game will start now! Get ready!!!", 
     "invalid_choice" : "Hmm... this is not a valid answer. Please try again.",
-    "round_winner" : "You chose: {user_choice}, computer chose: {virtual_choice}\n",
+    "player_win" : "You win this round",
+    "computer_win" : "Computer wins this round",
+    "tie" : "It is a tie this round",
+    "round_winner" : "You chose: {user_choice}, computer chose: {virtual_choice}",
     "goodbye" : "Thank you for visiting Rock Paper Scissors Lizard Spock (ROPASCLISP) game.\n==> Live Long and Prosper.",
     "game_summary" : [
                         "Current score board\n",
