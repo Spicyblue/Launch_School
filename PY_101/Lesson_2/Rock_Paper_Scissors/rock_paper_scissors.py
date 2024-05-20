@@ -62,14 +62,21 @@ def display_score(score_table):
     prompt(score_info.format(board = score_table))
     time.sleep(2)
 
-def display_winner(player, computer):
+def display_winner(player, computer, round_winner):
     winner_info = INFO['round_winner']
     prompt(winner_info.format(user_choice = player,
                               virtual_choice = computer))
+
+    if round_winner == 'player wins':
+        prompt(INFO['player_win'])
+    elif round_winner == 'computer wins':
+        prompt(INFO['computer_win'])
+    else:
+        prompt(INFO['tie'])
+
     time.sleep(2)
 
 def display_overall_winner(scores):
-
     if scores['player'] > scores['computer']:
         prompt(INFO['winner'])
     else:
@@ -89,34 +96,6 @@ def ask_start_game():
         break
     return answer
 
-# Validates player response to either start or end game!
-def validate_start_game(answer_string):
-
-    if answer_string.startswith('n'):
-        prompt(INFO['goodbye'])
-        time.sleep(2)
-        clear_screen()
-        sys.exit()
-    else:
-        prompt(INFO['begin_game'])
-        time.sleep(1)
-
-def check_choice(player_input):
-
-    match player_input:
-        case 'r':
-            return VALID_CHOICES['r']
-        case 'p':
-            return VALID_CHOICES['p']
-        case 's':
-            return VALID_CHOICES['s']
-        case 'l':
-            return VALID_CHOICES['l']
-        case 'sp':
-            return VALID_CHOICES['sp']
-        case _:
-            return player_input
-
 def ask_player_choice():
 
     while True:
@@ -132,6 +111,31 @@ def ask_player_choice():
         break
 
     return answer
+
+def ask_restart_game():
+
+    while True:
+        prompt('Do you want to play again? (y/n)?')
+        answer = input('Enter your answer: ').strip().lower()
+
+        while answer not in VALID_RESPONSE:
+            prompt(INFO['yes_or_no'])
+            answer = input('Enter your answer: ').strip().lower()
+        break
+
+    return answer
+
+def check_choice(player_input):
+    if player_input in VALID_CHOICES:
+        return VALID_CHOICES[player_input]
+    if player_input in VALID_CHOICES.values():
+        return player_input
+
+    return None
+
+# checks updated score table and return false when score == 3
+def check_scores(scores):
+    return WIN_SCORE not in [scores['player'], scores['computer']]
 
 def get_computer_choice():
     return random.choice(list(VALID_CHOICES.values()))
@@ -151,6 +155,18 @@ def get_winner(player, computer):
 
     return champion
 
+# Validates player response to either start or end game!
+def start_game(answer_string):
+
+    if answer_string.startswith('n'):
+        prompt(INFO['goodbye'])
+        time.sleep(2)
+        clear_screen()
+        sys.exit()
+    else:
+        prompt(INFO['begin_game'])
+        time.sleep(1)
+
 def update_scoreboard(score, winner):
 
     if winner == 'player wins':
@@ -162,28 +178,13 @@ def update_scoreboard(score, winner):
     else:
         score['rounds'] += 1
 
-# checks updated score table and return false when score == 3
-def check_scores(scores):
-    return WIN_SCORE not in [scores['player'], scores['computer']]
-
-def ask_restart_game():
-
-    while True:
-        prompt('Do you want to play again? (y/n)?')
-        answer = input('Enter your answer: ').strip().lower()
-
-        while answer not in VALID_RESPONSE:
-            prompt(INFO['yes_or_no'])
-            answer = input('Enter your answer: ').strip().lower()
-        break
-    return answer
-
 #orchestra function that displays game information
 def game_play_intro():
     display_welcome()
     display_game_info()
     response = ask_start_game()
-    validate_start_game(response)
+    start_game(response)
+    clear_screen()
 
 # orchestra function that runs the ROPSACLISP game
 def run_ropasclisp_game():
@@ -192,12 +193,12 @@ def run_ropasclisp_game():
                 'rounds' : 0}
 
     while check_scores(score_board):
-        clear_screen()
         choice = ask_player_choice()
         computer_choice = get_computer_choice()
         result = get_winner(choice, computer_choice)
-        display_winner(choice, computer_choice)
+        display_winner(choice, computer_choice, result)
         update_scoreboard(score_board, result)
+        clear_screen()
         display_score(score_board)
     display_overall_winner(score_board)
 
