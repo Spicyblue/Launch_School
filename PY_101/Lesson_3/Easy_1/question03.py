@@ -8,7 +8,7 @@ famous_words = "seven years ago..."
 new_string = "Four score and " + famous_words
 print(new_string)
 
-# method 2
+# method 2 using string interpolation
 starting = "Four score and "
 new_string_also = f'{starting}{famous_words}'
 print(new_string_also)

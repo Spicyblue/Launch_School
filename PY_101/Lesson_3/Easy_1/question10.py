@@ -2,7 +2,7 @@
 
 advice = "Few things in life are as important as house training your pet dinosaur."
 
-# using method hunding
+# method hunding
 print(advice.replace('important', 'urgent'))
 
 # using a forloop

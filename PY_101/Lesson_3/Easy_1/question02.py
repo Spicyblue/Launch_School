@@ -17,4 +17,3 @@ def check_string(string_input):
 
 print(check_string(str1))
 print(check_string(str2))
-    

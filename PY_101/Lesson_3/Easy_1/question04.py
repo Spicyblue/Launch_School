@@ -7,7 +7,7 @@ munsters_description = "the Munsters are CREEPY and Spooky."
 # using method hunting
 print(munsters_description.capitalize())
 
-# using indexing 
+# using indexing and slicing method.
 munsters_description_new = munsters_description[0].capitalize() + munsters_description[1:].lower()
 print(munsters_description_new)
 

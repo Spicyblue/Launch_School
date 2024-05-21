@@ -2,7 +2,7 @@
 str1 = "Few things in life are as important as house training your pet dinosaur."
 str2 = "Fred and Wilma have a pet dinosaur named Dino."
 
-# method hunting 1
+# method hunting
 print('Dino' in str1)
 print('Dino' in str2)
 
