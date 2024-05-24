@@ -7,6 +7,7 @@
 # Update the function from the previous exercise so it uses the Julian calendar prior to 1752,
 # and the Gregorian calendar starting in 1752.
 
+# Solution
 
 def is_leap_year(year):
     if year <= 0:
