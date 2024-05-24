@@ -1,7 +1,11 @@
+# Tip Calculator
 # Create a simple tip calculator. The program should prompt for a bill amount and a tip rate. 
 # The program must compute the tip, then print both the tip and the total amount of the bill.
 # You can ignore input validation and assume that the user will enter valid numbers.
 
+# Solution
+
+# constant used
 PERCENT = 0.01
 
 def ask_amounts():

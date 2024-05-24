@@ -1,3 +1,8 @@
+# Isn't it Odd?
+# Write a function that takes one integer argument and returns True when the number's absolute value is odd, False otherwise.
+
+# Solution
+
 def is_odd(number):
     return abs(number) % 2 == 1
 

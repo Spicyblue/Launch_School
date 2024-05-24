@@ -1,3 +1,9 @@
+# Odd Numbers
+# Print all odd numbers from 1 to 99, inclusive, with each number on a separate line.
+# Bonus Question: Can you solve the problem by iterating over just the odd numbers?
+
+# Solution
+
 for x in range(1, 100):
     if x % 2 == 1:
         print(x)

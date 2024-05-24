@@ -1,9 +1,12 @@
+# Sum or Product of Consecutive Integers
 # Write a program that asks the user to enter an integer greater than 0, 
 # then asks whether the user wants to determine the sum or the product of all 
 # numbers between 1 and the entered integer, inclusive.
 # Further Exploration
 # Suppose the input was a list of space separated integers instead of just a single integer? 
 # How would your compute_sum and compute_product functions change?
+
+# Solution
 
 import math
 

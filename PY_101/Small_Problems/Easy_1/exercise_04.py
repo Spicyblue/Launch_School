@@ -1,6 +1,12 @@
+# How big is the room?
+# Build a program that asks the user to enter the length and width of a room, in meters, 
+# then prints the room's area in both square meters and square feet.
+# Note: 1 square meter == 10.7639 square feet
+
+# Solution
 import math
 
-# constrants used
+# constants used
 CONVERT_TO_SQUARE_FEET = 10.7638
 ZERO = 0
 MEASUREMENT = ['feet', 'meter']
