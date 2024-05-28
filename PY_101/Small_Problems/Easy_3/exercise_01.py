@@ -8,5 +8,4 @@ def repeat(string_input, no_of_time):
     for _ in range(no_of_time):
         print(string_input)
 
-
 repeat('Hello', 3)

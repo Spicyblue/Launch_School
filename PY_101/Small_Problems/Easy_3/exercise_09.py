@@ -17,5 +17,4 @@ def clean_up(string_input):
 
     return new_string
 
-
 print(clean_up("---what's my +*& line?") == " what s my line ")

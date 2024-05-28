@@ -16,7 +16,6 @@ def triangle(num):
     for i in range(1, num + 1):
         print((' ' * (num - i)) + ('*' * i))
 
-# test cases
 triangle(1)
 triangle(5)
 triangle(7)

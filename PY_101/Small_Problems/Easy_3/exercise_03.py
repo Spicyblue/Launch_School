@@ -24,7 +24,6 @@ def bannarizer(string):
 # bannarizer('Welcome to Launch School')
 # bannarizer('')
 
-
 def bannarizer_updated(string, max_wdt = None):
     if max_wdt is None:
         max_wdt = len(string)

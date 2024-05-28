@@ -48,8 +48,6 @@ def get_grade_updated(first, second, third):
         if avg in score:
             return letter_grade
         
-
-
 print(get_grade_updated(95, 90, 93) == "A")      # True
 print(get_grade_updated(50, 50, 95) == "D")      # True
 print(get_grade_updated(86, 80, 89) == "B")      # True
