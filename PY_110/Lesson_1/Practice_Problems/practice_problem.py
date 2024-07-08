@@ -1,4 +1,4 @@
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 1
 # Given the tuple:
 # How would you count the number of occurrences of "banana" in the tuple?
@@ -20,7 +20,7 @@ print(len(numbers))
 # Answer
 # Set lenght is 5. Sets have unique values.
 
-# **********************************************************************#
+#**********************************************************************#
 #Practice Problem 3
 # Given two sets:
 
@@ -35,7 +35,7 @@ b = {3, 4, 5, 6}
 new_set = a|b
 print(new_set)
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 4
 # Given the following code, what would the output be?
 # Try to answer without running the code.
@@ -59,7 +59,7 @@ print(name_positions)
 #   'Bambam': 5
 # }
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 5
 # Calculate the total age given the following dictionary:
 
@@ -79,7 +79,7 @@ print(total_age)
 total_age = sum(ages.values())
 print(total_age)
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 6
 # Determine the minimum age from the above ages dictionary.
 
@@ -90,7 +90,7 @@ print(new_ages)
 min_age = min(ages.values())
 print(min_age)
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 7
 # What would the following code output?
 # Try to answer without running the code.
@@ -111,9 +111,8 @@ print(selected_words)
 # Elements that pass this check gets appended to
 # the new list referenced by `selected_words`.
 
-
+#**********************************************************************#
 # Practice Problem 8
-# **********************************************************************#
 # Given the following string, create a dictionary that represents
 # the frequency with which each letter occurs.
 # The frequency count should be case-sensitive:
@@ -160,7 +159,7 @@ print(char_freq)
 # check if both solution are equall and they both are.
 print(string_dictionary(statement) == char_freq)
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 9
 # What is the return value of the list comprehension below?
 # Try to answer without running the code.
@@ -170,7 +169,7 @@ print([num for num in [1, 2, 3] if num > 1])
 # Answer
 # The list comprehension outputs [2, 3], a new list object.
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 10
 # What does the following code print and why?
 
@@ -184,7 +183,7 @@ print(dictionary.popitem())
 # last dictionary key-value pair added to `dictionary`
 # as a tupple. This only applies to Python 3.7 and above.
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 11
 # What does the following code return? Try to answer without running the code
 lst = [1, 2, 3, 4, 5]
@@ -195,7 +194,7 @@ print(lst[:2])
 # we access the list objects referenced by lst from index 0 to 1,
 # and return the elements in those positions which is then printed out.
 
-# **********************************************************************#
+#**********************************************************************#
 # Practice Problem 12
 # What would be the output of the below code?
 # Try to answer without running the code.
