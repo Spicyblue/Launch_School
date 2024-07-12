@@ -577,7 +577,7 @@ def play_tic_tac_toe():
         if answer not in POSITIVE_ANSWER:
             start_game = False
 
-        prompt('Thank you for playing Tic Tac Toe')
+        prompt('Thank you for playing Tic Tac Toe. See you soon')
 
 #*****************************************************#
 #                 main function call                  #
