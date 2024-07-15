@@ -21,7 +21,7 @@ WINNING_CONDITION = [
         [1, 4, 7], [2, 5, 8], [3, 6, 9],
         [1, 5, 9], [3, 5, 7]
     ]
-GAMES_NEEDED_TO_WIN = 3
+WIN_SCORE = 3
 FIRST_PLAYER = "choose"
 
 #*****************************************************#
@@ -107,20 +107,20 @@ def display_grand_winner(scoreboard, username):
     Display the grand winner based on who gets to
     three wins first.
     '''
-    if scoreboard[username] == GAMES_NEEDED_TO_WIN:
-        prompt(f'Congrats, {username} is the grand winner!')
-    elif scoreboard['Computer'] == GAMES_NEEDED_TO_WIN:
-        prompt('Computer is the grand winner! Try again!')
+    if scoreboard[username] == WIN_SCORE:
+        boxify_message(f'Congrats, {username} is the grand winner!')
+    elif scoreboard['Computer'] == WIN_SCORE:
+        boxify_message('Computer is the grand winner! Try again!')
 
 def display_finished_game_round(scoreboard, winner, username):
     '''
     Display the round after a match ends.
     '''
     if winner in [username, "Computer"]:
-        prompt(f"{winner} won this game round")
+        boxify_message(f"{winner} won this game round")
 
     if winner not in [username, "Computer"]:
-        prompt("A tie! Tough game right?")
+        boxify_message("A tie! Tough game right?")
 
     prompt(f"End of round {scoreboard['round']}.")
 
@@ -209,19 +209,20 @@ def ask_enter_to_proceed():
             break
 
         prompt("This is not a valid answer")
+        three_seconds_delay()
+        clear_terminal()
 
-def ask_next_round(scoreboard):
+def ask_next_round():
     '''
     Ask user if they are ready for next round.
     '''
+
     while True:
-        prompt(f"Ready for round {scoreboard['round']}.")
+        prompt("Ready for next round?")
         prompt("Hit Enter or type 'yes': ")
         answer = input().strip().lower()
 
-        if answer == "" :
-            break
-        if answer in POSITIVE_ANSWER:
+        if answer == "" or answer in POSITIVE_ANSWER:
             break
 
         prompt("This is not a valid answer")
@@ -271,27 +272,23 @@ def ask_who_to_start_game(username):
     Ask user to choose who goes first between user and computer
     and returns users choice.
     '''
-    if FIRST_PLAYER == 'choose':
-        computer = 'Computer'
-        while True:
-            clear_terminal()
-            prompt("Enter number '1' or '2' for who plays first:")
-            prompt(f"1: {username} plays first ")
-            prompt("2: Computer plays first ")
+    computer = 'Computer'
+    while True:
+        clear_terminal()
+        prompt("Enter number '1' or '2' for who plays first:")
+        prompt(f"1: {username} plays first ")
+        prompt("2: Computer plays first ")
 
-            answer = input().strip()
-            match answer:
-                case '1':
-                    return username
-                case '2':
-                    return computer
-                case _:
-                    prompt("Sorry, this is not a valid choice")
-                    prompt("Please Choose 1 or 2.")
-                    three_seconds_delay()
-
-    else:
-        return None
+        answer = input().strip()
+        match answer:
+            case '1':
+                return username
+            case '2':
+                return computer
+            case _:
+                prompt("Sorry, this is not a valid choice")
+                prompt("Please Choose 1 or 2.")
+                three_seconds_delay()
 
 def confirm_username(username):
     '''
@@ -357,17 +354,13 @@ def best_defense_and_offense(line, board, marker):
 
     return None
 
-def best_of_five(score_board):
+def best_of_five(scoreboard, username):
     '''
     Checks if the current game score for both the user 
     and computer is equall to the score needed to win
     and return True, else False.
     '''
-    for score in score_board.values():
-        if score == GAMES_NEEDED_TO_WIN:
-            return True
-
-    return False
+    return WIN_SCORE not in [scoreboard[username], scoreboard['Computer']]
 
 def board_full(board):
     '''
@@ -507,15 +500,13 @@ def update_score(scoreboard, winner, username):
 
     if winner == username:
         scoreboard[username] += 1
-        scoreboard['round'] += 1
 
     if winner == 'Computer':
         scoreboard['Computer'] += 1
-        scoreboard['round'] += 1
 
-    else:
-        scoreboard['round'] += 1
-        prompt("A Tie! Tought game right!! Keep trying!!!")
+
+    scoreboard['round'] += 1
+    #prompt("A Tie! Tought game right!! Keep trying!!!")
 
 #*****************************************************#
 #      All orchestral game and main function          #
@@ -563,11 +554,12 @@ def play_tic_tac_toe():
         current_player = ask_who_to_start_game(player_name)
         game_score = initialize_scoreboard(player_name)
 
-        while not best_of_five(game_score):
+        while best_of_five(game_score, player_name):
             play_a_single_game_round(player_name, current_player, game_score)
-            if best_of_five(game_score):
+            if not best_of_five(game_score, player_name):
                 break
-            ask_next_round(game_score)
+            ask_next_round()
+            current_player = alternate_player(player_name, current_player)
 
         display_grand_winner(game_score, player_name)
         three_seconds_delay()
