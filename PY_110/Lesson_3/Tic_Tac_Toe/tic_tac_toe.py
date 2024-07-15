@@ -58,42 +58,57 @@ def prompt(message):
     '''
     print(f"===> {message}")
 
+def display_board(board, username):
+    '''
+    Generate and return the board as a string.
+    '''
+    horizonatal_divider = "-----" + ("+-----" * 2)
+    vertical_divider = "     |" * 2
+
+    board_lines = [
+        vertical_divider,
+        f"  {board[1]}  |  {board[2]}  |  {board[3]}  ",
+        vertical_divider,
+        horizonatal_divider,
+        vertical_divider,
+        f"  {board[4]}  |  {board[5]}  |  {board[6]}  ",
+        vertical_divider,
+        horizonatal_divider,
+        vertical_divider,
+        f"  {board[7]}  |  {board[8]}  |  {board[9]}  ",
+        vertical_divider,
+    ]
+
+    board_str = '\n'.join(board_lines)
+
+    if username != "Training":
+        clear_terminal()
+        print(f"{username} is {PLAYER_MARKER}. Computer is {AI_MARKER} \n")
+        print(board_str)
+        print('\n')
+
+    return board_str
+
 def display_game_board(board, username, scoreboard):
     '''
     Display the board for tic tac toe and the respective
     marker for both the user/player and computer.
     '''
-    horizonatal_divider = "-----" + ("+-----" * 2)
-    vertical_divider = "     |" * 2
-
     clear_terminal()
-
     display_scoreboard(scoreboard, username)
-    print('\n')
-    print(f"{username} is {PLAYER_MARKER}. Computer is {AI_MARKER} \n")
-    print(vertical_divider)
-    print(f"  {board[1]}  |  {board[2]}  |  {board[3]}  ")
-    print(vertical_divider)
-    print(horizonatal_divider)
-    print(vertical_divider)
-    print(f"  {board[4]}  |  {board[5]}  |  {board[6]}  ")
-    print(vertical_divider)
-    print(horizonatal_divider)
-    print(vertical_divider)
-    print(f"  {board[7]}  |  {board[8]}  |  {board[9]}  ")
-    print(vertical_divider)
-    print('\n')
+    display_board(board, username)
 
 def display_game_instructions():
     '''
     Instruction on how to play
     '''
-    training_board = display_training_board()
+    training_board = {number: number for number in range(1, 10)}
+    training_board_str = display_board(training_board, "Training")
 
     message = f"""
 How to Play:
-The layout of the board is shown belown 
-{training_board}
+The layout of the board is shown below
+{training_board_str}
 Choose a number between 1 and 9 to mark your position on the board.
 Remember!
 The first player to get 3 squares in a row
@@ -122,7 +137,7 @@ def display_finished_game_round(scoreboard, winner, username):
     if winner not in [username, "Computer"]:
         boxify_message("A tie! Tough game right?")
 
-    prompt(f"End of round {scoreboard['round']}.")
+    prompt(f"End of round {scoreboard['round'] - 1}.")
 
 def display_scoreboard(score_board, username):
     '''
@@ -139,29 +154,6 @@ def display_scoreboard(score_board, username):
     prompt(f"{user_score_label:<{max_label_length}} {score_board[username]}")
     prompt(f"{ai_score_label:<{max_label_length}} {score_board['Computer']}")
     prompt(f"{round_label:<{max_label_length}} {score_board['round']}")
-
-def display_training_board():
-    '''
-    Generate the training board to show positions that user can mark
-    '''
-    horizontal_divider = "-----" + ("+-----" * 2)
-    vertical_divider = "     |     |"
-
-    board_lines = [
-        vertical_divider,
-        "  1  |  2  |  3  ",
-        vertical_divider,
-        horizontal_divider,
-        vertical_divider,
-        "  4  |  5  |  6  ",
-        vertical_divider,
-        horizontal_divider,
-        vertical_divider,
-        "  7  |  8  |  9  ",
-        vertical_divider,
-    ]
-
-    return '\n'.join(board_lines)
 
 def display_welcome_message():
     """
@@ -212,13 +204,14 @@ def ask_enter_to_proceed():
         three_seconds_delay()
         clear_terminal()
 
-def ask_next_round():
+def ask_next_round(scoreboard):
     '''
     Ask user if they are ready for next round.
     '''
+    next_round = scoreboard['round']
 
     while True:
-        prompt("Ready for next round?")
+        prompt(f"Ready for round {next_round}?")
         prompt("Hit Enter or type 'yes': ")
         answer = input().strip().lower()
 
@@ -451,7 +444,7 @@ def initialize_scoreboard(username):
     '''
     game_board = {f'{username}': 0,
                    'Computer' : 0,
-                   'round' : 0
+                   'round' : 1
                    }
 
     return game_board
@@ -558,7 +551,7 @@ def play_tic_tac_toe():
             play_a_single_game_round(player_name, current_player, game_score)
             if not best_of_five(game_score, player_name):
                 break
-            ask_next_round()
+            ask_next_round(game_score)
             current_player = alternate_player(player_name, current_player)
 
         display_grand_winner(game_score, player_name)
