@@ -1,3 +1,18 @@
+'''
+# tic_tac_toe_v2.0
+
+Changes made
+- Updated the rounds to start from 1 instead of Zero
+- Winners are annouced with boxify (decorative borders)
+- Rotates who goes first. Different player starts.
+- Removed unneccesary constants FIRST_PLAYER.
+- Refactored the display_training_board function.
+- Refactored the display_game_instructions function.
+- Added new code display_board function.
+- Refactored the display_finished_game_round function.
+- Refactored the ask_next_round function.
+'''
+
 #*****************************************************#
 #            All Modules and Libraries Used           #
 #*****************************************************#
