@@ -69,7 +69,6 @@ print(digit_list(444) == [4, 4, 4])               # True
 # Note!
 # Time take to write PEDAC and test/debug code is 5 mins, 46 seconds.
 
-# using list comprehension:
 ## LS Answer ##
 # def digit_list(number):
 #     return [int(digit) for digit in str(number)]
