@@ -1,22 +1,22 @@
 '''
-Combining Lists
+Combining Lists.
 Write a function that takes two lists as arguments and
 returns a set that contains the union of the values from the two lists.
 You may assume that both arguments will always be lists.
 
-# Problem:
+# Problem
 - Input: 
 List
 - Output:
 Set
+
 - Rules
     Explicit:
     Argument is always list
-    Must take in two list
     Implicit:
     Do not mutate any of the list argument
 
-# Examples:
+# Examples
 print(union([1, 3, 5], [3, 6, 9]) == {1, 3, 5, 6, 9}) # True
 
 # Data structure
