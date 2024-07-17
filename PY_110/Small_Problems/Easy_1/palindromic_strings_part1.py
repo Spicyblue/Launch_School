@@ -1,4 +1,5 @@
 '''
+Palindromic Strings (Part 1).
 Write a function that returns True if the string passed as an argument is a palindrome, False otherwise.
 A palindrome reads the same forwards and backwards.
 For this problem, the case matters and all characters matter.
@@ -28,7 +29,7 @@ print(is_palindrome("madam i'm adam") == False)
 # Data Structure
 List Perhaps for indexing
 
-#Algorithm
+# Algorithm
     - Get input.
     - Create an empty string.
     - Reverse input and assign to empty string.
@@ -36,7 +37,7 @@ List Perhaps for indexing
         -If True, return True.
         -If false, return False.
     
-#Code
+# Code
 '''
 
 # Solution

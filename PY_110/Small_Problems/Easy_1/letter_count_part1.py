@@ -1,28 +1,24 @@
 '''
-Letter Counter (Part 1)
-Write a function that takes a string consisting of zero or more space-separated words and returns a dictionary that shows the number of words of different sizes.
-
+Letter Counter (Part 1).
+Write a function that takes a string consisting of zero or more space-separated words
+and returns a dictionary that shows the number of words of different sizes.
 Words consist of any sequence of non-space characters.
 
-print(word_sizes('') == {})
 # Problem
     - Input: 
-    string
+    String
     - Output: 
     Dictionary (Key is length of string and value is numbeer of time it occurs )
 
     Rules:
     - Explicit:
-    string consisting of zero or more space-separated words
-    dictionary that shows the number of words of different sizes.
+    String consisting of zero or more space-separated words
+    Dictionary that shows the number of words of different sizes.
 
     - Implicit:
-    - empty string returns empty dictionary
-
-
+    - Empty string returns empty dictionary
 
 # Examples
-
 # All of these examples should print True
 
 string = 'Four score and seven.'
@@ -39,6 +35,7 @@ print(word_sizes(string) == {6: 1, 2: 1, 4: 1})
 
 # Data Structure:
 Dictionary
+
 # Algorithm
     -High level
         1. Enter string Input.

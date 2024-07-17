@@ -1,8 +1,9 @@
 '''
+Searching 101.
 Write a program that solicits six (6) numbers from the user and prints a
 message that describes whether the sixth number appears among the first five.
 
-
+Further exploration.
 Suppose we alter the problem to look for a number that satisfies a condition 
 (e.g., a number greater than 25) instead of a specific number? 
 Would the current solution still work? Why or why not?
@@ -18,7 +19,7 @@ Would the current solution still work? Why or why not?
     - Valid if last input is present in previous input, else 
     - Only six input is accepted.
 
-# Examples and testcase  
+# Examples
 Example 1
 
 Enter the 1st number: 25
@@ -40,18 +41,18 @@ Enter the last number: 18
 
 18 isn't in 25,15,20,17,23.
 
-# Datt Structure:
-List to store and index input
+# Data Structure:
+List
 
 # Algorithm
     - High  level
         1. Ask user to enter a valid number (Assuming all inputs are numbers).
         2. Add number to a empty list.
         3. Repeat 1 and 2 until 6 numbers are present in the list.
-            -if 6 input are present in the list, go to 4.
+            -If 6 input are present in the list, go to 4.
         4. Check if the last number is present in the previous 5 inputs.
             - If yes, print that the number in present in the list.
-            - if not, print that number is not present.
+            - If not, print that number is not present.
 
 # Code 
 '''

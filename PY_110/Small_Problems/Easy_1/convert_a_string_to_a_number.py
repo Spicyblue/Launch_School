@@ -1,5 +1,5 @@
 '''
-Convert a String to a Number
+Convert a String to a Number.
 Write a function that takes a string of digits and 
 returns the appropriate number as an integer.
 You may not use any of the standard conversion functions available in Python,
@@ -29,7 +29,7 @@ print(string_to_integer("570") == 570)    # True
 # Data structure
 Not needed..perhaps an dictionary? 
 
-#Algorithm
+# Algorithm
     - High Level
         1. Get Input.
         2. Create a result variable with an inital integer value set to zero.

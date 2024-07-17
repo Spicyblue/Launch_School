@@ -1,4 +1,5 @@
 '''
+Running Totals.
 Write a function that takes a list of numbers 
 and returns a list with the same number of elements, 
 but with each element's value being the running total 
@@ -29,7 +30,8 @@ print(running_total([3]) == [3])                  # True
 print(running_total([]) == [])                    # True
 
 # Data Structure
-List 
+List
+
 # Algorithm
  -High level:
     1. Get Input.
@@ -43,9 +45,9 @@ List
         - Add its value to the value of the current element in input.
         - Add the reult to new list.
         - Repeat until last element.
-    5 return the new list.
+    5 Return the new list.
     
-# code
+# Code
 '''
 
 # Solution

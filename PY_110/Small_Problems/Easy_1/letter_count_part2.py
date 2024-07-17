@@ -1,5 +1,5 @@
 '''
-Letter Counter (Part 2)
+Letter Counter (Part 2).
 Write a function that takes a string consisting of zero or more space-separated words
 and returns a dictionary that shows the number of words of different sizes.
 Words consist of any sequence of non-space characters.
@@ -14,16 +14,13 @@ For instance, the word size of "it's" is 3, not 4.
 
     Rules:
     - Explicit:
-    string consisting of zero or more space-separated words
-    - Remove all signs and symbols
-
-    dictionary that shows the number of words of different sizes.
-
+    String consisting of zero or more space-separated words
+    Remove all signs and symbols
+    Dictionary that shows the number of words of different sizes.
     - Implicit:
-    - empty string returns empty dictionary
+    Empty string returns empty dictionary
 
 # Examples
-
 # All of these examples should print True
 
 string = 'Four score and seven.'

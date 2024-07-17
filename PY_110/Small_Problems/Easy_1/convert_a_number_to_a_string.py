@@ -1,5 +1,5 @@
 '''
-Convert a Number to a String
+Convert a Number to a String.
 In the previous two exercises, you developed functions 
 that convert simple numeric strings to signed integers. 
 In this exercise and the next, you're going to reverse those functions.
@@ -9,7 +9,7 @@ You may not use any of the standard conversion functions available in Python suc
 Your function should do this the old-fashioned way
 and construct the string by analyzing and manipulating the number.
 
-#Problem:
+# Problem:
 - Input:
 Integer of digits.
 - Output:
@@ -22,16 +22,17 @@ String of digits.
     construct the string by analyzing and manipulating the number
 
 
-#Examples:
+# Examples:
 
 print(integer_to_string(4321) == "4321")              # True
 print(integer_to_string(0) == "0")                    # True
 print(integer_to_string(5000) == "5000")              # True
 print(integer_to_string(1234567890) == "1234567890")  # True
-# Data structure
-- Dictionary 
 
-#Algorithm
+# Data structure
+Dictionary 
+
+# Algorithm
     - High End 
         1. Get input.
         2. Create variable for an empty list.
@@ -43,7 +44,7 @@ print(integer_to_string(1234567890) == "1234567890")  # True
             - Repeat for all element till the last element in input.
         6. Return result
 
-#Code
+# Code
 '''
 
 # Solution

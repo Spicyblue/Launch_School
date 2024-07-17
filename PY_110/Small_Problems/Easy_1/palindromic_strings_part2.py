@@ -1,6 +1,6 @@
 '''
-Write another function that 
-returns True if the string passed as an argument is a palindrome, or False otherwise. 
+Palindromic Strings (Part 2).
+Write another function that returns True if the string passed as an argument is a palindrome, or False otherwise. 
 This time, however, your function should be case-insensitive,
  and should ignore all non-alphanumeric characters. 
 If you wish, you may simplify things by calling the
@@ -9,14 +9,12 @@ is_palindrome function you wrote in the previous exercise.
 # Problem:
     - Input:
     String
-    Output:
+    - Output:
     Bool
 
-    Explicit:
-    - A plalindrome
-    - case dosent matter, only alphanumerics matter
-
-    Implicit:
+    - Explicit:
+    A plalindrome
+    Case dosent matter, only alphanumerics matter
 
 # Examples
 
@@ -35,7 +33,7 @@ print(is_real_palindrome("Madam, I'm Adam") == True) # True
 # Data Structure
 List Perhaps for indexing
 
-#Algorithm
+# Algorithm
     - Get input.
     - Create an empty string to hold the clean new string.
     - Clean the input string by removing all characters than are not alphanumeric and assing to empty string.
@@ -44,7 +42,7 @@ List Perhaps for indexing
         -If True, return True.
         -If false, return False.
     
-#Code
+# Code
 '''
 
 # Solution
