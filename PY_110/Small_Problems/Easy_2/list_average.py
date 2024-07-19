@@ -1,44 +1,100 @@
 '''
-List Average
-Write a function that takes one argument, a list of integers,
-and returns the average of all the integers in the list,
-rounded down to the integer component of the average.
-The list will never be empty, and the numbers will always be positive integers.
+After Midnight (Part 1).
+The time of day can be represented as the number of minutes before or after midnight.
+If the number of minutes is positive, the time is after midnight.
+If the number of minutes is negative, the time is before midnight.
+Write a function that takes a time using this minute-based format and
+returns the time of day in 24-hour format (hh:mm).
+Your function should work with any integer input.
+
+You may not use Python's datetime module.
+Disregard Daylight Savings and Standard Time and other complications.
 
 # Problem
 - Input: 
-list
+Integer
 - Output:
-integer
+String
 
 - Rules
     Explicit:
-    Function that takes one argument.
-    Returns the average of all the integers in the list
-    Average is rounded down to the integer component of the average.
-    The list will never be empty.
-    The numbers will always be positive integers.
+    If the number of minutes is positive, the time is after midnight.
+    If the number of minutes is negative, the time is before midnight.
+    Ouput should be in 24-hour format (hh:mm)
   
 # Examples
-print(average([1, 5, 87, 45, 8, 8]) == 25)        # True
-print(average([9, 47, 23, 95, 16, 52]) == 40)     # True
-print(average([7]) == 7)                          # True
+
+print(time_of_day(0) == "00:00")        # True
+print(time_of_day(-3) == "23:57")       # True
+print(time_of_day(35) == "00:35")       # True
+print(time_of_day(-1437) == "00:03")    # True
+print(time_of_day(3000) == "02:00")     # True
+print(time_of_day(800) == "13:20")      # True
+print(time_of_day(-4231) == "01:29")    # True
 
 # Data structure
-list
+list or none
 
 # Algorithm
     - High End 
         1. Get input.
-        2. Create a result and assign it a value of 0.
-        3. Iterate to the list.
-            - Add the element to the current value of result.
-            - repeat for all elements.
-        4. Get the average of result.
-        5. Return the int value of result
+        2. Define midnight.
+        3. If input positive or negative:
+            - Get the hour.
+            - Get the minute.
+        4. Return the value of hour and minute in the right format
 
 # Code
 '''
+
+DAY = 24
+MIN = 60
+
+# Solution
+def time_of_day(minutes):
+
+    total_mins_in_day = DAY * MIN
+    midninght = 00.00
+    minutes = minutes % total_mins_in_day # This keeps us within the 1440 minutes frame
+    
+    if minutes == int(midninght):
+        hours = int(minutes)
+        min = int(minutes)
+
+    hours = minutes // MIN 
+    min = minutes % MIN
+
+    return f"{hours:02d}:{min:02d}"
+
+# code check
+print(time_of_day(0) == "00:00")        # True
+print(time_of_day(-3) == "23:57")       # True
+print(time_of_day(35) == "00:35")       # True
+print(time_of_day(-1437) == "00:03")    # True
+print(time_of_day(3000) == "02:00")     # True
+print(time_of_day(800) == "13:20")      # True
+print(time_of_day(-4231) == "01:29")    # True
+
+# Note!
+# Time take to write PEDAC and test/debug code is 39 mins, 26 seconds.
+
+## LS Answer ##
+
+# MINUTES_PER_HOUR = 60
+# HOURS_PER_DAY = 24
+# MINUTES_PER_DAY = HOURS_PER_DAY * MINUTES_PER_HOUR
+
+# def format_time(hours, minutes):
+#     return f"{hours:02d}:{minutes:02d}"
+
+# def time_of_day(delta_minutes):
+#     delta_minutes = delta_minutes % MINUTES_PER_DAY
+#     hours = delta_minutes // MINUTES_PER_HOUR
+#     minutes = delta_minutes % MINUTES_PER_HOUR
+#     return format_time(hours, minutes)
+
+
+
 
 # Solution
 def average(lst):
