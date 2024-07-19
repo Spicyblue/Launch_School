@@ -42,8 +42,8 @@ list or none
         2. Define midnight.
         3. If input positive or negative:
             - Get the hour.
-            - Get the minute
-        4. Return the value of hour and minute in the right format
+            - Get the minute.
+        4. Return the value of hour and minute in the right format.
 
 # Code
 '''

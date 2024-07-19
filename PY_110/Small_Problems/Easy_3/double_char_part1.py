@@ -1,5 +1,5 @@
 '''
-Double Char (Part 1)
+Double Char (Part 1).
 Write a function that takes a string, doubles every character in the string,
 then returns the result as a new string.
 
@@ -11,7 +11,7 @@ String
 
 - Rules
     Explicit:
-    Doubles every string including spaces
+    Doubles every string including spaces.
    
 # Examples
 
@@ -27,8 +27,8 @@ list or none
         1. Get input.
         2. Set an empty string to hold result.
         2. Iterate through each char input:
-            - For each ele, double the character.
-            - add to result
+            - For each element, double the character.
+            - Add to result
         3. Return result
 
 # Code
