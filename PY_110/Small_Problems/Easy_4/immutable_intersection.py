@@ -26,7 +26,7 @@ list and frozenset.
 # Algorithm
     - High End:
         1. Get input.
-        2. convert input to sets and find their intersection.
+        2. Convert input to sets and find their intersection.
         3. Convert the intersection to frozenset.
         3. Return frozenset.
 
