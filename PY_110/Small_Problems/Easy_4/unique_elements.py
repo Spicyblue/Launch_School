@@ -22,6 +22,7 @@ print(unique_from_first(list1, list2) == {9, 3})
 
 # Data structure
 Dictionary and list
+
 # Algorithm
     - High End:
         1. Get input.

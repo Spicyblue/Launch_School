@@ -5,7 +5,7 @@ and returns a list containing only the transactions for the specified inventory 
 
 # Problem
 - Input: 
-integer and list of dictionary
+Integer and list of dictionary
 - Output:
 list of dictionary
 
@@ -53,7 +53,6 @@ List and dictionary.
 '''
 
 # Solution
-
 def transactions_for(item_id, transaction_list):
 
     result = []

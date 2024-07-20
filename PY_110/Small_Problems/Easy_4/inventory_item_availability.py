@@ -1,5 +1,5 @@
 '''
-Inventory Item Availability
+Inventory Item Availability.
 Building on the previous exercise, write a function that returns True or False
 based on whether or not an inventory item (an ID number) is available.
 As before, the function takes two arguments: an item ID and a list of transactions.
@@ -11,7 +11,7 @@ You may (and should) use the transactions_for function from the previous exercis
 
 # Problem
 - Input: 
-integer and list of dictionary
+Integer and list of dictionary
 - Output:
 Bool
 
@@ -47,19 +47,18 @@ List and dictionary.
 # Algorithm
     - High End:
         1. Get input.
-        2. Create a counter for counting items going in and out
-        3. Iterate through input list: (this returns the dictionaries in the list)
-            - Add quantity of items going in to counter for in .
+        2. Create a counter for counting items going in and out.
+        3. Iterate through input list: (this returns the dictionaries in the list).
+            - Add quantity of items going in to counter for in.
             - Add quantity of items going out to counter for out. 
         4. Subtract quantity of items going in from out.
                 - If the result is negative, return false.
-                - if the result in positive, return True
+                - if the result in positive, return True.
 
 # Code
 '''
 
 # Solution
-
 def transactions_for(item_id, transaction_list):
 
     result = []
@@ -128,4 +127,3 @@ print(is_item_available(105, transactions) == True)   # True
 #             quantity -= transaction["quantity"]
 
 #     return quantity > 0
-    

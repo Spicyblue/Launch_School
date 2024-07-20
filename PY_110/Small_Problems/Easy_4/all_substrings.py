@@ -61,8 +61,8 @@ def substrings(string):
     start = 0
 
     while start < len(string):
-        print(len(string))
         stop = start + 1
+
         while stop < len(string) + 1: 
             sub_string = string[start : stop]
             result.append(sub_string)

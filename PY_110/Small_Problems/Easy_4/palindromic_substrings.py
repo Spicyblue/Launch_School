@@ -1,10 +1,13 @@
 '''
-Palindromic Substrings
-Write a function that returns a list of all palindromic substrings of a string. That is, each substring must consist of a sequence of characters that reads the same forward and backward. The substrings in the returned list should be sorted by their order of appearance in the input string. Duplicate substrings should be included multiple times.
-
+Palindromic Substrings.
+Write a function that returns a list of all palindromic substrings of a string.
+That is, each substring must consist of a sequence of characters that reads the same forward and backward.
+The substrings in the returned list should be sorted by their order of appearance in the input string.
+Duplicate substrings should be included multiple times.
 You may (and should) use the substrings function you wrote in the previous exercise.
-
-For the purpose of this exercise, you should consider all characters and pay attention to case; that is, 'AbcbA' is a palindrome, but 'Abcba' and 'Abc-bA' are not. In addition, assume that single characters are not palindromes.
+For the purpose of this exercise, you should consider all characters and pay attention to case;
+that is, 'AbcbA' is a palindrome, but 'Abcba' and 'Abc-bA' are not.
+In addition, assume that single characters are not palindromes.
 
 # Problem
 - Input: 
@@ -50,13 +53,13 @@ List
         2. Create a list to hold result.
         3. Create a start index begining at 0
         4. Iterate through the string.
-           - In the outer loop
-                Create a stop index beginning at start + 1:
-                    - In the inner loop:
-                        - Using string indexing, access the string element from start to the stop index (substring)
-                        -  check if substring is a palindrome 
-                             - if yes, append to list
-                        - Increase stop index by 1
+           - In the outer loop.
+                Create a stop index beginning at start + 1.
+                    - In the inner loop.
+                        - Using string indexing, access the string element from start to the stop index (substring).
+                        -  check if substring is a palindrome.
+                             - if yes, append to list.
+                        - Increase stop index by 1.
                 - Increatse the start index by 1.
         5.Return list.
 

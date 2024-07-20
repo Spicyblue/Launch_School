@@ -33,7 +33,7 @@ list
         4. Iterate through the string.
            - Using string indexing, access the string element from start to the end index.
            - Add element to list.
-           - increase index by 1.
+           - Increase index by 1.
         5.Return list.
 
 # Code

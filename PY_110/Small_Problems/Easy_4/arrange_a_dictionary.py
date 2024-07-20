@@ -1,5 +1,5 @@
 '''
-Arrange a Dictionary
+Arrange a Dictionary.
 Given a dictionary, return its keys sorted by the values associated with each key.
 
 # Problem

@@ -6,7 +6,7 @@ Transform two lists into frozen sets and find their common elements.
 - Input: 
 list 
 - Output:
-frozenset
+Frozenset
 
 - Rules
     Explicit:
@@ -21,14 +21,14 @@ expected_result = frozenset({8})
 print(intersection(list1, list2) == expected_result) # True
 
 # Data structure
-list and frozenset
+list and frozenset.
 
 # Algorithm
     - High End:
         1. Get input.
-        2. convert input to sets and find their intersection
-        3. Convert the intersection to frozenset
-        3. Return frozenset
+        2. convert input to sets and find their intersection.
+        3. Convert the intersection to frozenset.
+        3. Return frozenset.
 
 # Code
 '''
