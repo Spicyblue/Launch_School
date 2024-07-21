@@ -45,7 +45,6 @@ None
 '''
 
 # Solution
-
 def sum_of_sums(lst1):
 
     result = 0
@@ -57,7 +56,6 @@ def sum_of_sums(lst1):
     return result
 
 # code check
-
 print(sum_of_sums([3, 5, 2]) == 21)               # True
 # (3) + (3 + 5) + (3 + 5 + 2) --> 21
 

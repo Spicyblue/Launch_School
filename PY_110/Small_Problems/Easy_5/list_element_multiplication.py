@@ -37,7 +37,6 @@ List
 '''
 
 # Solution
-
 def multiply_items(lst1, lst2):
 
     result = []
