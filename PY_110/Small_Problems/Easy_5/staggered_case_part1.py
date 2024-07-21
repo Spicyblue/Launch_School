@@ -82,7 +82,7 @@ print(staggered_case(string) == result)  # True
 print(staggered_case('') == "")          # True
 
 # Note!
-# Time take to write PEDAC and test/debug code is 6 mins, 32 seconds.
+# Time take to write PEDAC and test/debug code is 5 mins, 32 seconds.
 
 ## LS Answer ##
 # def staggered_case(string):
