@@ -1,5 +1,5 @@
 '''
-Sum of Sums
+Sum of Sums.
 Write a function that takes a list of numbers and
 returns the sum of the sums of each leading subsequence in that list.
 Examine the examples to see what we mean. You may assume that the list always contains at least one number.
