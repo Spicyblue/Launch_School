@@ -8,7 +8,7 @@ Non-alphabetic characters should not be changed,
 but should be counted as characters for determining when to switch between upper and lower case.
 
 # Problem
-- Input: 
+- Input:
 String
 - Output:
 String
