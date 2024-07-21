@@ -1,5 +1,5 @@
 '''
-Staggered Case (Part 1)
+Staggered Case (Part 1).
 Write a function that takes a string as an argument and
 returns that string with a staggered capitalization scheme.
 Every other character, starting from the first,
