@@ -16,7 +16,7 @@ Issue with the current code:
 The current code throws an error because the size of the set changes during iteration. 
 Iterating and mutating over an iterable at the same time isnt considered a good practice.
 
-To solve this, we can use the create a list of the original set 
+To solve this, we can use the create a list of the original set.
 and then modify the origanl set during the iteration.
 '''
 

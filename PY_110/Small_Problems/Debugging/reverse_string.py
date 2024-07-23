@@ -2,7 +2,6 @@
 Reverse a String.
 You have a function that is supposed to reverse a string passed as an argument.
 However, it's not producing the expected output. Explain the bug, and provide a solution.
-
 '''
 
 # # Current code
@@ -16,10 +15,13 @@ However, it's not producing the expected output. Explain the bug, and provide a 
 
 '''
 Issue with the current code:
+Within the forloop, for every iteration, we are concantenating the value of string object
+refereced by the temporary variable `char` to the current value of `string`
+and using the new string object returned to reassign `string`.
 
-Within the forloop, for every iteration, we are concantenating the value of string object refereced by the temporary variable `char` to the current value of `string` and using the new string object returned to reassign `string`. This isnt what we want to do.
-
-To solve this, due to the immutable nature of string, we can create a new variable `result` to hold the string object after each iteration and concantenate the string object referenced by `char` to result.
+To solve this, due to the immutable nature of string,
+we can create a new variable `result` to hold the string object after each iteration
+and concantenate the string object referenced by `char` to result.
 '''
 
 # fixed code 

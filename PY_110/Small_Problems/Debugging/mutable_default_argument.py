@@ -15,7 +15,8 @@ However, the function seems to be behaving unexpectedly:
 '''
 Issue with the current code:
 The current code sets a `lst` default parameter as an empty list which is mutable.
-However, every time the function is called, since list are mutable, the default value of the paramenter gets updated.
+However, every time the function is called, since list are mutable,
+the default value of the paramenter gets updated.
 
 To solve this, we set 'lst' default parameter to `None` and within the function definition of `append_to_list`,
 only initilize `lst` to reference to an empty list if `lst` is None.

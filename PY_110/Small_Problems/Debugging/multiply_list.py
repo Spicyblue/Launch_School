@@ -1,9 +1,8 @@
 '''
-Multiply List
+Multiply List.
 You want to multiply all elements of a list by 2.
 However, the function is not returning the expected result.
 Explain the bug, and provide a solution.
-
 '''
 
 # # Current code
@@ -26,8 +25,8 @@ to the new list and return the new list after the ietration is complete.
 
 If we want to mutate the list in place, 
 we can access perform a index reassignment or element reassignment by initializing a variable `index`
- to access the correct element referenced by `lst`  and incrementing it by 1 after each iteration. 
- However, is not an ideal practice.
+to access the correct element referenced by `lst`  and incrementing it by 1 after each iteration. 
+However, is not an ideal practice.
 '''
 
 # fixed code with new list

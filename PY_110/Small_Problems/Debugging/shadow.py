@@ -15,6 +15,7 @@ However, the function raises an error. Why? How would you fix this code?
 Issue with the current code:
 The current code has a function name that is non_idiomatic because 
 it uses the same name with a built-in python function and thus shadows it.
+
 To solve this, we simply rename out function name and update all function calls with the new name.
 '''
 

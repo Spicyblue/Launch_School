@@ -14,7 +14,8 @@ Why is that? How would you fix this code?
 
 '''
 Issue with the current code:
-The error occurs because the `if` conditional only returns the value for a valid `key` argument. For invalid keys, it raises an key error.
+The error occurs because the `if` conditional only returns the value for a valid `key` argument.
+For invalid keys, it raises an key error.
 
 To solve this, we need to check if the `key` argument is in the dictionary, and if present, return its value.
 to the new list and return the new list after the ietration is complete.

@@ -3,7 +3,6 @@ List Deduplication.
 A developer is trying to remove duplicates from a list.
 They use a set for deduplication, but the order of elements is lost.
 How can we preserve the order?
-
 '''
 
 # # Current code
