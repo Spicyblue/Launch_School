@@ -2,7 +2,7 @@
 Calendar Event Checker.
 We have a list of events and want to check whether a specific date is available 
 (i.e., no events planned for that date).
-However, the function always returns the wrong value.
+However, the function always returns the wrong va lue.
 '''
 
 # # Current code
