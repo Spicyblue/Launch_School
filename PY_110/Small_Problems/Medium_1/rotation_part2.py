@@ -34,8 +34,8 @@ None
         2. If the count is 1, return the integer input.
         3. Convert integer to string.
         4. Split string from start to the - count .
-            - concantenate rest of the string, ignoring - count value.
-            - concantenate finally with -count
+            - Concantenate rest of the string, ignoring - count value.
+            - Concantenate finally with -count
         5. Convert string to integer.
         6. Return result
 

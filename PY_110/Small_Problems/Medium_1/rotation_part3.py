@@ -44,11 +44,11 @@ None
         2. If the count is 1, return the integer input.
         3. Create a max counter for storing the max_value after rotation.
         4. Convert integer to string.
-        5. Split string from start to the - count .
+        5. Split string from start to the - count.
             - Concantenate rest of the string, ignoring - count value.
-            - Concantenate finally with -count
-            - Convert to integer
-            - Return result
+            - Concantenate finally with -count.
+            - Convert to integer.
+            - Return result.
             - Repeat same process on the return result.
         6. Return result
 

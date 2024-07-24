@@ -43,11 +43,11 @@ List
 # Algorithm
     - High End 
         1. Get input.
-        2. Check if input type is list, if not, return None
+        2. Check if input type is list, if not, return None.
         3. Check is list is empty, if empty, return list. 
         4. Get list input from second element till end and assign to result.
-        5. Add the first element of the last position of result
-        6. Return result
+        5. Add the first element of the last position of result.
+        6. Return result.
 
 # Code
 '''
