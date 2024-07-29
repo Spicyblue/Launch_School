@@ -44,6 +44,7 @@ list
 word =  'echo'
 
 def convert_to_tupple(string, count):
+    
     empty_list = []
 
     for index in range(len(string)):
