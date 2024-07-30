@@ -1,5 +1,5 @@
 '''
-Stack Machine Interpretation
+Stack Machine Interpretation.
 This problem takes a while to describe, which also gives a feeling of great complexity.
 The solution, however, is surprising in its overall lack of complexity.
 While it will may take a while for you to come up with an appropriate mental model,

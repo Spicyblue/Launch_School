@@ -1,5 +1,7 @@
 '''
-Write a function that takes a string as an argument and returns that string with every occurrence of a "number word" -- 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine' -- converted to its corresponding digit character.
+Write a function that takes a string as an argument and returns that string with every occurrence of a "number word"
+ -- 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine' -- 
+ converted to its corresponding digit character.
 
 You may assume that the string does not contain any punctuation.
 
@@ -11,7 +13,6 @@ String
 - Rules
     Explicit:
     Convert number words to digit characeter.
-    
 
 # Examples:
 message = 'Please call me at five five five one two three four'
@@ -38,7 +39,7 @@ Dictionary but ended up using a match case.
 # Code
 '''
 
-# # Solution
+# Solution
 def number_word_to_digit(string_input):
 
     match string_input:
