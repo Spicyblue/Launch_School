@@ -1,12 +1,14 @@
 '''
 Is It Prime?
-A prime number is a positive number that is evenly divisible only by itself and 1. Thus, 23 is prime since its only divisors are 1 and 23. However, 24 is not prime since it has divisors of 1, 2, 3, 4, 6, 8, 12, and 24. Note that the number 1 is not prime.
+A prime number is a positive number that is evenly divisible only by itself and 1.
+Thus, 23 is prime since its only divisors are 1 and 23.
+However, 24 is not prime since it has divisors of 1, 2, 3, 4, 6, 8, 12, and 24.
+Note that the number 1 is not prime.
 
-Write a function that takes a positive integer as an argument and returns true if the number is prime, false if it is not prime.
-
-You may not use any of Python's add-on packages to solve this problem. Your task is to programmatically determine whether a number is prime without relying on functions that already do that for you.
-
-Examples:
+Write a function that takes a positive integer as an argument and returns true if the number is prime,
+false if it is not prime.
+You may not use any of Python's add-on packages to solve this problem.
+Your task is to programmatically determine whether a number is prime without relying on functions that already do that for you.
 
 # Problem:
 - Input:
@@ -20,7 +22,6 @@ Integer
     
 
 # Examples:
-
 print(is_prime(1) == False)              # True
 print(is_prime(2) == True)               # True
 print(is_prime(3) == True)               # True
@@ -48,10 +49,11 @@ None
         3. Interate through the all the sequence avalible for the input after 1 (from  2) till end (but not including the number).
             - If any resulting number can divide the input, return False
         4. Return False
+
 # Code
 '''
 
-# # Solution
+# Solution
 def is_prime(number):
 
     if number == 1:
