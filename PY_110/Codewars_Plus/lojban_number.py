@@ -1,4 +1,5 @@
 '''
+Lojban Number.
 # https://www.codewars.com/kata/6584b7cac29ca91dd9124009
 
 # Lojban Numbers
@@ -115,7 +116,7 @@ print(lojban_string_to_integer(test))
 
 # Steven Code
 def convert_lojban(lojban):
-    
+
     substrings = [lojban[starting_idx: starting_idx + 2] 
                   for starting_idx 
                   in range(0, len(lojban)-1, 2)]

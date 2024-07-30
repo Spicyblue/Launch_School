@@ -1,4 +1,5 @@
 ''' 
+Echo.
 Write a program that initializes the string word = "echo", 
 the empty tuple t = (),  and the integer count = 3. 
 Then, write a function to make t = ("echo", "echo", "echo", "cho", "cho", "cho", "ho", "ho", "ho", "o", "o," "o")
@@ -44,7 +45,7 @@ list
 word =  'echo'
 
 def convert_to_tupple(string, count):
-    
+
     empty_list = []
 
     for index in range(len(string)):
