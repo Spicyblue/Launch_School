@@ -128,7 +128,6 @@ print(letter_percentages('123') == expected_result)
 # Note!
 # Time take to write PEDAC and test/debug code is 23 mins, 30 seconds.
 
-
 ## LS Answer ##
 # def percentage(count, total_count):
 #     return f'{(count / total_count) * 100:.2f}'

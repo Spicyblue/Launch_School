@@ -41,7 +41,7 @@ List
 # Algorithm
     - High End:
         1. Get input.
-        2. Create an empty list to hold all input.
+        2. Create a list to hold all input.
         3. Sort the list in ascending order
         4. Check if any of the input is zero, return invalid.
         5. Check if the sum of the first two is greater the the third:
@@ -82,7 +82,6 @@ print(triangle(3, 1, 1) == "invalid")      # True
 
 # Note!
 # Time take to write PEDAC and test/debug code is 17 mins, 30 seconds.
-
 
 ## LS Answer ##
 # def get_triangle_type(side1, side2, side3):
