@@ -35,7 +35,12 @@ print(smaller_numbers_than_current(my_list) == result)
 List or List comprehension
 
 # Algorithm
-    High level:
+    High Level:
+    1. Count every number bigger than the current number.
+    2. Save the value
+    3. Get back the values.
+
+    Low level:
         1. Get input.
         2. Create a list to store the result.
         3. Ceate a set if the original list for keeping unique values.
@@ -55,7 +60,7 @@ List or List comprehension
 def smaller_numbers_than_current(lst):
     result = []
     lst_set = set(lst)
-    
+
     for number in lst:
         count = 0
         for digit in lst_set:

@@ -27,7 +27,12 @@ print(minimum_sum([-1, -5, -3, 0, -1, 2, -4]) == -10)
 List
 
 # Algorithm
-    High level:
+    High Level:
+    1. Make list of every 5 consecutive numbers.
+    2. Find their sum.
+    3. Get back the lowest possible sum.
+
+    Low level:
         1. Get input.
         2. Check if the list has more than 5 element.
         3. Make a copy of the originaly.

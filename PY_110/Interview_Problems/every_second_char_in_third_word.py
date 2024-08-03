@@ -34,8 +34,15 @@ print(to_weird_case(original) == expected)
 # Data structure
 List
 
-# Algorithm
-    High level:
+# Algorithm:
+    High Level:
+    1. Make list of every word in the sentence.
+    2. Get every third word in list.
+    3. Make every second letter captial in the third word.
+    4. Add the changes to the list.
+    5. Get back the new sentence.
+
+    Low level:
         1. Get input.
         2. Split string input into list.
         3. Iterate through the list.
@@ -129,7 +136,6 @@ print(to_weird_case(original) == expected)
 # original = "Mary Poppins' favorite word is supercalifragilisticexpialidocious"
 # expected = "Mary Poppins' fAvOrItE word is sUpErCaLiFrAgIlIsTiCeXpIaLiDoCiOuS"
 # print(to_weird_case(original) == expected)
-
 
 ## LS Answer ##
 # Not Available
