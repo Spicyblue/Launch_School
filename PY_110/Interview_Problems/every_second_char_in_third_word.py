@@ -1,4 +1,5 @@
 '''
+Every second letter.
 Create a function that takes a string argument and 
 returns a copy of the string with every second character in every third word converted to uppercase.
 Other characters should remain the same.

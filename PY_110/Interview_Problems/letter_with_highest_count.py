@@ -32,6 +32,10 @@ print(most_common_char(my_str) == 'e')
 None
 
 # Algorithm
+    High Level:
+    1. Make a count of ever letter in the sentence.
+    2. Get back the letter that occurs most.
+
     Low level:
         1. Get input.
         2. Create a result to store string.
