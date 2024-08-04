@@ -1,4 +1,3 @@
-
 '''
 Unscrambled.
 Create a function that takes two strings as arguments and returns True 

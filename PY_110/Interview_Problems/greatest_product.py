@@ -1,4 +1,3 @@
-
 '''
 Greatest_product.
 Create a function that takes a string argument that consists entirely of numeric digits

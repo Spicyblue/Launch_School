@@ -1,4 +1,3 @@
-
 '''
 Multiples of 7 and 11.
 Create a function that takes a single integer argument and returns the sum of all the multiples of 7 or 11

@@ -1,4 +1,3 @@
-
 '''
 Distinct multiples.
 Create a function that returns the count of distinct case-insensitive alphabetic characters.
