@@ -1,10 +1,8 @@
 '''
 Available at https://www.codewars.com/kata/65eb2c4c274bd91c27b38d32
-Level = 5kyu
 
 Three divisor.
-Your task is to write a function that takes two integers n and m, and
-returns a sorted array of all integers from n to m inclusive, which have exactly 3 divisors (excluding 1 and the number itself).
+Your task is to write a function that takes two integers n and m, and returns a sorted array of all integers from n to m inclusive, which have exactly 3 divisors (excluding 1 and the number itself).
 
 Example:
 solution(2, 20) -> [16]
@@ -22,13 +20,11 @@ result - array of integers
 Input:
 - Integers
 Output:
-- List
+- List (sorted)
 
     Rules:
         Exp:
-        - Returns a sorted array of all integers from n to m inclusive, 
-        which have exactly 3 divisors (excluding 1 and the number itself).
-
+        - returns a sorted array of all integers from n to m inclusive, which have exactly 3 divisors (excluding 1 and the number itself)
         Implicit:
         - If there is no number, it returns an empty list.
 
@@ -39,8 +35,10 @@ print(solution(624, 625) == [625])
 print(solution(625, 626) == [625])
 print(solution(734, 735) == [])
 
+
 # Data Structure:
 List
+
 
 # Algorithm:
     High End:
@@ -107,7 +105,5 @@ print(solution(734, 735) == [])
 # Note!
 # Time take to write PEDAC and test/debug code 12 mins 23 seconds
 
+
 # other solutions
-
-
-

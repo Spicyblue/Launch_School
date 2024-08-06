@@ -1,5 +1,6 @@
 '''
-Available at https://www.codewars.com/kata/583f158ea20cfcbeb400000a/python
+Available at https://www.codewars.com/kata/583f158ea20cfcbeb400000a/python  
+Level = 7kyu
 
 Arithmetic.
 Given two numbers and an arithmetic operator (the name of it, as a string),

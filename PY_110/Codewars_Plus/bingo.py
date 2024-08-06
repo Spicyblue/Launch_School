@@ -1,5 +1,6 @@
 '''
 Available at https://www.codewars.com/kata/57f625992f4d53c24200070e
+Level = 6kyu
 
 Bingo.
 Time to win the lottery!
