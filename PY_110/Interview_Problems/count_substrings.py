@@ -1,4 +1,5 @@
 '''
+Count substrings.
 Create a function that takes two string arguments and returns
 the number of times that the second string occurs in the first string.
 Note that overlapping strings don't count: 'babab' contains 1 instance of 'bab', not 2.
