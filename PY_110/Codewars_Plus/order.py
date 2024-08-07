@@ -1,5 +1,6 @@
 '''
 Available at https://www.codewars.com/kata/55c45be3b2079eccff00010f/train/python
+Level = 6kyu
 
 Ordered string.
 Your task is to sort a given string. Each word in the string will contain a single number.

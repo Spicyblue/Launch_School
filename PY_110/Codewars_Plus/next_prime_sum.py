@@ -1,8 +1,11 @@
 '''
 Available at https://www.codewars.com/kata/65eb2c4c274bd91c27b38d32
+Level = 5kyu
 
 Three divisor.
-Your task is to write a function that takes two integers n and m, and returns a sorted array of all integers from n to m inclusive, which have exactly 3 divisors (excluding 1 and the number itself).
+Your task is to write a function that takes two integers n and m,
+and returns a sorted array of all integers from n to m inclusive,
+which have exactly 3 divisors (excluding 1 and the number itself).
 
 Example:
 solution(2, 20) -> [16]

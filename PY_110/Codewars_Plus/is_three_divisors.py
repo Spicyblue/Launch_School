@@ -90,11 +90,14 @@ def is_three_divisors(number):
 
 
 def solution(input1, input2):
+
     result = []
 
     for num in range(input1, input2 + 1):
         if is_three_divisors(num):
             result.append(num)
+
+    print(result)
 
     return result
 
@@ -108,6 +111,23 @@ print(solution(734, 735) == [])
 # Time take to write PEDAC and test/debug code 12 mins 23 seconds
 
 # other solutions
+# def solution(n, m):
+#     if n > 10**14 or m > 10**18:
+#         return []
+        
+#     result = []
+
+#     for sequence in range(n, m + 1):
+#         lst = []
+
+#         for num in range(2, sequence):
+#             if sequence % num == 0:
+#                 lst.append(num)
+
+#         if len(lst) == 3:
+#             result.append(sequence)
+
+#     return result
 
 
 
