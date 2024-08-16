@@ -1,12 +1,13 @@
 '''
-Exercise 2
-Using decorators, 
-- Add getter and setter methods to your Car class so you can view and change the color of your car.
-- You should also add getter methods that let you view but not modify the car's model and year. 
-- Don't forget to write some tests.
+Exercise 3
+Add a method to the Car class that lets you spray paint the car a specific color.
+Don't use a setter method for this. Instead, create a method whose name accurately
+describes what it does. Don't forget to test your code.
+
 '''
 
 # Solution
+
 class ModelCar:
 
     def __init__(self, model, year, color, speed = 0):
@@ -29,7 +30,7 @@ class ModelCar:
             return 'Colour must be alphabetic'
 
         self._color = color
-
+    
     @property
     def get_model(self):
         print('Getter Model in process')
@@ -39,6 +40,11 @@ class ModelCar:
     def get_year(self):
         print('Getter Year in process')
         return f"The current model year is {self.year}"
+    
+    def spray(self, new_color):
+        self._new_color = new_color
+        print('Setter Spray in process')
+        return f"The new spray color is {self._new_color}"
 
     def engine_on(self):
         print('Getter Engine_on in process')
@@ -60,6 +66,7 @@ class ModelCar:
     def current_speed(self):
         print('Getter Current speed in process')
         return f'The current speed of your {self.color} {self.model} is {self.speed}'
+
 
 my_car = ModelCar('Telsa', 2027, 'sky blue')
 
@@ -108,11 +115,18 @@ print(my_car.color)
 # The current model color is sky blue
 
 my_car.color = 'royal gold'
+# outputs
 # Setter Colour in process
 
 print(my_car.color)
+# outputs
 # Getter Colour in process
 # The current model color is royal gold
+
+print(my_car.spray('Purple lime'))
+# outputs
+# Setter Spray in process
+# The new spray color is Purple lime
 
 ## LS Answer ##
 
@@ -140,6 +154,10 @@ print(my_car.color)
 #     def year(self):
 #         return self._year
 
+#     def spray_paint(self, color):
+#        self.color = color
+#        print(f'Your {color} paint job looks great!')
+
 #     def engine_start(self):
 #         print('The engine is on!')
 
@@ -160,33 +178,35 @@ print(my_car.color)
 #         print(f'Your speed is {self.speed} mph.')
 
 # lumina = Car('chevy lumina', 1997, 'white')
-# lumina.engine_start() # The engine is on!
-# lumina.get_speed()    # Your speed is 0 mph.
-# lumina.speed_up(20)   # You accelerated 20 mph.
-# lumina.get_speed()    # Your speed is 20 mph.
-# lumina.speed_up(30)   # You accelerated 30 mph.
-# lumina.get_speed()    # Your speed is 50 mph.
-# lumina.brake(15)      # You decelerated 15 mph.
-# lumina.get_speed()    # Your speed is 35 mph.
-# lumina.brake(30)      # You decelerated 30 mph.
-# lumina.get_speed()    # Your speed is 5 mph.
-# lumina.engine_off()   # Let's park this baby!
-#                       # The engine is off
-# lumina.get_speed()    # Your speed is 0 mph.
-
+# # lumina.engine_start() # The engine is on!
+# # lumina.get_speed()    # Your speed is 0 mph.
+# # lumina.speed_up(20)   # You accelerated 20 mph.
+# # lumina.get_speed()    # Your speed is 20 mph.
+# # lumina.speed_up(30)   # You accelerated 30 mph.
+# # lumina.get_speed()    # Your speed is 50 mph.
+# # lumina.brake(15)      # You decelerated 15 mph.
+# # lumina.get_speed()    # Your speed is 35 mph.
+# # lumina.brake(30)      # You decelerated 30 mph.
+# # lumina.get_speed()    # Your speed is 5 mph.
+# # lumina.engine_off()   # Let's park this baby!
+# #                       # The engine is off
+# # lumina.get_speed()    # Your speed is 0 mph.
 # print(f'My car is {lumina.color}.')
-# My car is white.
+# # My car is white.
 
 # print(f"My car's model is a {lumina.model}.")
-# My car's model is a chevy lumina.
+# # My car's model is a chevy lumina.
 
 # print(f"My car's year is {lumina.year}.")
-# My car's year is 1997.
+# # My car's year is 1997.
 
 # lumina.color = 'brown'
 # print(f'My car is now {lumina.color}.')
-# My car is now brown.
+# # My car is now brown.
 
-# lumina.year = 2023
-# AttributeError: property 'year' of 'Car' object
-# has no setter
+# lumina.year = 2023  # Do not unhighlight this code
+# # AttributeError: property 'year' of 'Car' object
+# # has no setter
+
+# lumina.spray_paint('red')
+# Your red paint job looks great!
