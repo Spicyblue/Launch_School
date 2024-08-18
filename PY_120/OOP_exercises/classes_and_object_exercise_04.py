@@ -73,7 +73,6 @@ class ModelCar:
         print('Getter Current speed in process')
         return f'The current speed of your {self.color} {self.model} is {self.speed}'
 
-
 my_car = ModelCar('Telsa', 2027, 'sky blue')
 
 print(my_car.current_speed())

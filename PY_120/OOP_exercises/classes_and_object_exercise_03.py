@@ -178,19 +178,19 @@ print(my_car.spray('Purple lime'))
 #         print(f'Your speed is {self.speed} mph.')
 
 # lumina = Car('chevy lumina', 1997, 'white')
-# # lumina.engine_start() # The engine is on!
-# # lumina.get_speed()    # Your speed is 0 mph.
-# # lumina.speed_up(20)   # You accelerated 20 mph.
-# # lumina.get_speed()    # Your speed is 20 mph.
-# # lumina.speed_up(30)   # You accelerated 30 mph.
-# # lumina.get_speed()    # Your speed is 50 mph.
-# # lumina.brake(15)      # You decelerated 15 mph.
-# # lumina.get_speed()    # Your speed is 35 mph.
-# # lumina.brake(30)      # You decelerated 30 mph.
-# # lumina.get_speed()    # Your speed is 5 mph.
-# # lumina.engine_off()   # Let's park this baby!
-# #                       # The engine is off
-# # lumina.get_speed()    # Your speed is 0 mph.
+# lumina.engine_start() # The engine is on!
+# lumina.get_speed()    # Your speed is 0 mph.
+# lumina.speed_up(20)   # You accelerated 20 mph.
+# lumina.get_speed()    # Your speed is 20 mph.
+# lumina.speed_up(30)   # You accelerated 30 mph.
+# lumina.get_speed()    # Your speed is 50 mph.
+# lumina.brake(15)      # You decelerated 15 mph.
+# lumina.get_speed()    # Your speed is 35 mph.
+# lumina.brake(30)      # You decelerated 30 mph.
+# lumina.get_speed()    # Your speed is 5 mph.
+# lumina.engine_off()   # Let's park this baby!
+#                       # The engine is off
+# lumina.get_speed()    # Your speed is 0 mph.
 # print(f'My car is {lumina.color}.')
 # # My car is white.
 

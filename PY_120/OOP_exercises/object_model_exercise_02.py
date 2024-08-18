@@ -2,6 +2,7 @@
 Exercise 2
 Given an instance of a Foo object, show two ways to print I am a Foo object
 without hardcoding the word Foo.
+
 '''
 
 # Solution

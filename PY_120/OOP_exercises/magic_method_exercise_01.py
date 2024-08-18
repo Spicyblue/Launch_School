@@ -5,6 +5,7 @@ Create a Car class that makes the following code work as indicated:
 vwbuzz = Car('ID.Buzz', 2024, 'red')
 print(vwbuzz)        # Red 2024 ID.Buzz
 print(repr(vwbuzz))  # Car('ID.Buzz', 2024, 'red')
+
 '''
 
 # Solution

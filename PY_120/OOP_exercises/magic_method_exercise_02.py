@@ -110,7 +110,6 @@ class Vector:
         y = repr(self.y)
         return f'Vector({x}, {y})'
 
-
 v1 = Vector(5, 12)
 # Output
 # Instantiation

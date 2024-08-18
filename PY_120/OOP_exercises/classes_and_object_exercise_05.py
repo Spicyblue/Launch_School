@@ -47,8 +47,6 @@ class Person:
 
         self._full_name = (first, last)
 
-
-
 actor = Person('Mark', 'Sinclair')
 # output
 # Instantiation in Process
@@ -69,7 +67,6 @@ print(actor.name)
 
 # actor.name = ('', 'Diesel')
 # ValueError: Name must be alphabetic.
-
 
 character = Person('annIE', 'HAll')
 # output
@@ -93,7 +90,6 @@ print(friend.name)
 friend.name = ('Lynn', 'Blake-John')
 # Setter Name in process
 # ValueError: Name must be alphabetic.
-
 
 # ## LS Answer ##
 # class Person:
