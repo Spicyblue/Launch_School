@@ -1,4 +1,5 @@
 '''
+Exercise 1
 For each of the following pairs of classes, 
 try to determine whether they have an "is-a" or "has-a" relationship or neither.
 
