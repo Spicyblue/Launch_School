@@ -1,5 +1,5 @@
 '''
-Hello, Sophie! (Part 2)
+Hello, Sophie! (Part 2).
 Using the code from the previous exercise, 
 move the greeting from the __init__ method to an instance method
 named greet that prints a greeting when invoked. 
