@@ -1,7 +1,7 @@
 '''
-Hello, Chloe!.
+Identify Yourself (Part 1).
 
-Using the following code, add an instance method named rename that renames kitty when invoked.
+Using the following code, add a method named identify that returns the calling object.
 
 class Cat:
     def __init__(self, name):
@@ -17,9 +17,9 @@ class Cat:
 
 # Comments show expected output
 kitty = Cat('Sophie')
-print(kitty.name)             # Sophie
-kitty.rename('Chloe')
-print(kitty.name)             # Chloe
+print(kitty.identify())
+# <__main__.Cat object at 0x10508c8d0>
+# The object ID (0x105...) may vary
 
 '''
 
@@ -37,14 +37,14 @@ class Cat:
     def name(self, value):
         self._name = value
     
-    def rename(self, new_value):
-        self._name = new_value
+    def identify(self):
+        return self
 
 # Comments show expected output
 kitty = Cat('Sophie')
-print(kitty.name)             # Sophie
-kitty.rename('Chloe')
-print(kitty.name)             # Chloe
+print(kitty.identify())
+# <__main__.Cat object at 0x10508c8d0>
+# The object ID (0x105...) may vary
 
 ## LS Solution ##
 # class Cat:
@@ -59,11 +59,12 @@ print(kitty.name)             # Chloe
 #     def name(self, value):
 #         self._name = value
 
-#     def rename(self, new_name):
-#         self.name = new_name
+#     def identify(self):
+#         return self
 
-# # Comments show expected output
+# Comments show expected output
 # kitty = Cat('Sophie')
-# print(kitty.name)             # Sophie
-# kitty.rename('Chloe')
-# print(kitty.name)             # Chloe
+# print(kitty.identify())
+# <__main__.Cat object at 0x10508c8d0>
+# The object ID (0x105...) may vary
+# # Comments show expected output
