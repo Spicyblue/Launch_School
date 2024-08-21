@@ -31,7 +31,7 @@ class Cat:
 
 
 kitty = Cat('Sophie')
-kitty.greet()
+kitty.greet()       # Outputs Hello! My name is Sophie!
 
 
 ## LS Solution ##

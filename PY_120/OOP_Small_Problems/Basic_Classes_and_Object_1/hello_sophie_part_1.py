@@ -25,7 +25,7 @@ class Cat:
         self.name = name
         print(f"Hello! My name is {self.name}")
 
-kitty = Cat('Sophie')
+kitty = Cat('Sophie')   # Outputs Hello! My name is Sophie!
 
 ## LS Solution ##
 # class Cat:
