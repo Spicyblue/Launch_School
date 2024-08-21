@@ -22,8 +22,8 @@ Hello! My name is Sophie!
 class Cat:
     
     def __init__(self, name):
-        self._name = name
-        print(f"Hello! My name is {self._name}")
+        self.name = name
+        print(f"Hello! My name is {self.name}")
 
 kitty = Cat('Sophie')
 
