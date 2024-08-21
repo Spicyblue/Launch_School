@@ -16,7 +16,6 @@ class Cat:
 class Cat:
     pass
 
-
 kitty = Cat()
 
 ## LS Solution ##
