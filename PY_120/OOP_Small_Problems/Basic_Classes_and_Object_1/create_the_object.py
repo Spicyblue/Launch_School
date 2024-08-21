@@ -17,7 +17,7 @@ class Cat:
     pass
 
 
-cat = Cat()
+kitty = Cat()
 
 ## LS Solution ##
 # class Cat:
