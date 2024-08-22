@@ -24,6 +24,8 @@ print(truck1.start_engine('slow'))
 
 '''
 
+# Solution
+
 class Vehicle:
     def start_engine(self):
         return 'Ready to go!' 
@@ -44,6 +46,7 @@ print(truck1.start_engine('slow'))
 # Ready to go! Drive slow, please!
 
 ## LS Solution ##
+
 # class Vehicle:
 #     def start_engine(self):
 #         return 'Ready to go!'

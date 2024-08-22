@@ -32,6 +32,8 @@ print(car1.bed_type)
 
 '''
 
+# Solution
+
 class Vehicle:
     def __init__(self, year):
         self._year = year
@@ -64,6 +66,7 @@ print(car1.year)              # 2006
 # AttributeError: 'Car' object has no attribute 'bed_type'
 
 ## LS Solution ##
+
 # class Vehicle:
 #     def __init__(self, year):
 #         self._year = year
