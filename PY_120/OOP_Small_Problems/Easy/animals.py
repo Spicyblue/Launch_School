@@ -15,6 +15,7 @@ class Animal:
     def introduce(self):
         return (f"Hello, my name is {self.name} and I am "
                 f"{self.age} years old and {self.status}.")
+                
 The Cat initializer should accept 3 parameters: name, age, and status. 
 Cats should always have a leg count of 4 and a species of "cat". 
 The introduce method for the Cat class should return a string identical 
