@@ -1,5 +1,6 @@
 '''
 Pet Shelter.
+
 Consider the following code:
 
 cocoa   = Pet('cat', 'Cocoa')
