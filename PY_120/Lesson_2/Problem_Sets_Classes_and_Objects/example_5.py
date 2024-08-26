@@ -8,6 +8,8 @@ print(f"The person's name is: {bob}")
 
 '''
 
+# Solution
+
 class Person:
     
     def __init__(self, name, last_name = ""):

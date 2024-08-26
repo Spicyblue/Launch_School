@@ -10,7 +10,10 @@ print(bob.first_name)       # Robert
 print(repr(bob.last_name))  # ''
 bob.last_name = 'Smith'
 print(bob.name)             # Robert Smith
+
 '''
+
+# Solution
 
 class Person:
     

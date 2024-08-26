@@ -7,7 +7,10 @@ bob = Person('bob')
 print(bob.name)           # bob
 bob.name = 'Robert'
 print(bob.name)           # Robert
+
 '''
+
+# Solution
 
 class Person:
     

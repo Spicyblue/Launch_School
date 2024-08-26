@@ -10,6 +10,8 @@ Without adding any code to the Person class, we want to compare bob and rob to s
 
 '''
 
+# Solution
+
 class Person:
     
     def __init__(self, name, last_name = ""):

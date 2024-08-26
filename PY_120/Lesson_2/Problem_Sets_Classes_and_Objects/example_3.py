@@ -7,6 +7,8 @@ Use the following code to test your code:
 
 '''
 
+# Solution
+
 class Person:
     
     def __init__(self, name, last_name = ""):
