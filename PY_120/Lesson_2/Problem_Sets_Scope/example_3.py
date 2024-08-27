@@ -1,10 +1,10 @@
 '''
-Example 2.
+Example 3.
 
-Add a get_breed method to the Dog class from your answer to the previous problem.
-The method should return the dog's breed.
-Use the method to print the breeds of the two dog objects you created in the previous problem.
-You should also mark the breed instance variable for internal use only.
+Create a Cat class that has a single method named get_name
+that returns the name instance variable.
+Without initializing name, try to instantiate a Cat object and call get_name.
+Print Name not set! when the error occurs.
 
 '''
 
@@ -17,11 +17,22 @@ class Dog:
     
     def get_breed(self):
         return self._breed
-    
+
+class Cat:
+
+    def get_name(self):
+        try:
+            return self.name
+        except AttributeError:
+            return "Name not set!"
+
 husky = Dog('Golden Retriever')
 print(husky.get_breed())           # Outputs Golden Retriever
 bruno  = Dog('Poodle')
 print(bruno.get_breed())           # Outputs Poodle
+
+kitty = Cat()
+print(kitty.get_name())
 
 ## LS Solution ##
 # class Dog:
@@ -30,6 +41,13 @@ print(bruno.get_breed())           # Outputs Poodle
 
 #     def get_breed(self):
 #         return self._breed
+
+# class Cat:
+#     def get_name(self):
+#         try:
+#             return self.name
+#         except AttributeError:
+#             return "Name not set!"
 
 # dog1 = Dog('Golden Retriever')
 # dog2 = Dog('Poodle')
