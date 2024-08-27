@@ -2,27 +2,28 @@
 Example 6.
 
 Modify the Student class from your answer to the previous problem.
-The modified class should have an instance variable called name that gets initialized during instantiation.
-Create two Student objects with different names but the same school, then print the name and school for both students.
+The modified class should have a class method that returns the school's name.
+Without instantiating any Student objects, print the school's name in two different ways:
+once with the class method, and once by accessing the class variable directly.
 
 '''
 
 # Solution
 
 class Student:
-    name = 'Ochulor'
 
-    def __init__(self, school_name):
-        self._school_name = school_name
+    school_name= 'Oxford'
+
+    def __init__(self, name):
+        self.name = name
 
     def info(self):
-        return f'{self.name} , {self._school_name}'
+        return f'{self.name} , {self.school_name}'
 
-oxford = Student('Oxford')
-print(oxford.info())      # Outputs Ochulor , Oxford
-
-oxford.name = 'Okechukwu'
-print(oxford.info())      # Outputs Okechukwu , Oxford
+student1 = Student('Ochulor')
+student2 = Student('Dave')
+print(student1.info())      # Outputs Ochulor , Oxford
+print(student2.info())      # Outputs Dave , Oxford
 
 ## LS Solution ##   
 # class Student:
