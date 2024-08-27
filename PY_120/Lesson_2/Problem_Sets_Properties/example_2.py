@@ -1,9 +1,9 @@
 '''
-Example 1.
+Example 2.
 
-Create a Person class with a "private" attribute _name.
-Use properties to create a getter and setter for the _name attribute.
-The _name attribute must be a string. Be sure to test your code.
+Update your answer from problem 1 to disallow empty strings.
+You should raise a ValueError. 
+Be sure to test your code.
 
 '''
 
@@ -22,12 +22,16 @@ class Person:
     def name(self, name):
         if not isinstance(name, str):
             raise TypeError ('Input must be a valid name')
+        if name == '':
+            raise ValueError('Name must be atleast one letter long')
         self._name = name
 
 emeka = Person('Emeka')
 print(emeka.name)           # Emeka
 emeka.name = 'Uche'
 print(emeka.name)           # Uche
+
+# emeka.name = ''             # ValueError: Name must be atleast one letter long
 
 ## LS Solution ##
 # class Person:
@@ -43,6 +47,9 @@ print(emeka.name)           # Uche
 #         if not isinstance(name, str):
 #             raise TypeError('Name must be a string.')
 
+#         if name == '':
+#             raise ValueError('Name must not be empty.')
+
 #         self._name = name
 
 # linda = Person('Linda')
@@ -53,3 +60,5 @@ print(emeka.name)           # Uche
 
 # linda.name = ['Linda']
 # # TypeError: Name must be a string.
+
+# linda.name = ''           # ValueError: Name must not be empty.
