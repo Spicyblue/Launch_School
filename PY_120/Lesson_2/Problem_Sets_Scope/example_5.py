@@ -1,10 +1,10 @@
 '''
-Example 6.
+Example 5.
 
-Modify the Student class from your answer to the previous problem.
-The modified class should have a class method that returns the school's name.
-Without instantiating any Student objects, print the school's name in two different ways: 
-once with the class method, and once by accessing the class variable directly.
+Define a Student class that has a class variable named school_name. 
+You should initialize the school name to 'Oxford'. 
+After defining the class, instantiate an instance of the Student class and 
+print the school name using that instance.
 
 '''
 
