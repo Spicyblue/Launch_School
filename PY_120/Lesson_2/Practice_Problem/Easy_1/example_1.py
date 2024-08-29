@@ -14,6 +14,7 @@ True
 '''
 
 # Solution
+
 # All of the above are objects in python and you can
 #  find out what class they belong to using the the function `type` 
 # or the __class__ magic variable on the object.
