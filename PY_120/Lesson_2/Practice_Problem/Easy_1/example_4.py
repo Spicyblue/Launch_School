@@ -1,5 +1,5 @@
 '''
-Example 3.
+Example 4.
 
 In the previous question, we had a mix-in called SpeedMixin that contained a go_fast method. 
 We add this mix-in to the Car class as shown below:
