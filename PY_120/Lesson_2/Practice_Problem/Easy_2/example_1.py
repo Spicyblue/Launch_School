@@ -1,4 +1,3 @@
-
 '''
 Example 1.
 
@@ -24,9 +23,9 @@ class Bingo(Game):
 
 ## LS Solution ##
 
-class Game:
-    def play(self):
-        return 'Start the game!'
+# class Game:
+#     def play(self):
+#         return 'Start the game!'
 
-class Bingo(Game):
-    pass
+# class Bingo(Game):
+#     pass
