@@ -22,7 +22,7 @@ Write some code to test your theory.
 
 # Solution.
 # The `_cats_count` is a class variable that is scoped within the class `cats`.
-# It keeps count of how many cat variable are created.
+# It keeps count of how many `Cat` instances are created.
 # When ever a new car instance is created, an augumented addition operation
 # increments the value of the `_cats_count` variable by 1. 
 # The classmethod then returns the current value referenced by the class variable `_cats_count `
