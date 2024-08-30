@@ -1,5 +1,5 @@
 '''
-Example 4.
+Example 5.
 
 Modify the code from the previous question so that Hello.hi()
 uses the Greeting.greet instance method to print Hi.

@@ -1,4 +1,6 @@
 '''
+Example 4.
+
 Suppose we have this code:
 
 class Greeting:
