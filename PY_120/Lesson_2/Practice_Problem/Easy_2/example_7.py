@@ -34,7 +34,7 @@ print(tv.manufacturer())            # outputs Amazon
 print(tv.model())                   # outputs Omni Fire
 
 print(Television.manufacturer())    # Outputs Amazon
-#print(Television.model())           # raises an error
+#print(Television.model())          # raises an error
 
 ## LS Solution ##
 
