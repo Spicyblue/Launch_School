@@ -1,5 +1,5 @@
 '''
-Example 1.
+Example 2.
 
 Alan created the following code to keep track of items for a shopping cart application he's writing:
 
