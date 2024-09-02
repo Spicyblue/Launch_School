@@ -60,13 +60,16 @@ class Marker:
         pass
 
 class Player:
-    def __init__(self):
-        # STUB
-        # A player is either a human or a computer that is
-        #   playing the game.
-        # Perhaps we need a "marker" to keep track of this
-        #   player's symbol? (i.e., 'X' or 'O')
-        pass
+    def __init__(self, marker):
+        self.marker = marker
+
+    @property
+    def marker(self):
+        return self._marker
+    
+    @marker.setter
+    def marker(self, value):
+        self._marker = value
 
     def mark(self):
         # STUB
@@ -82,11 +85,11 @@ class Player:
 
 class Human(Player):
     def __init__(self):
-        super().__init__()
+        super().__init__(Square.HUMAN_MARKER)
 
 class Computer(Player):
     def __init__(self):
-        super().__init__()
+        super().__init__(Square.COMPUTER_MARKER)
 
 class TTTGame:
 
@@ -140,7 +143,7 @@ class TTTGame:
             print("Sorry, that's not a valid choice.")
             print()
 
-        self.board.mark_square(choice, Square.HUMAN_MARKER)
+        self.board.mark_square(choice, self.human.marker)
 
     def is_game_over(self):
         # STUB
