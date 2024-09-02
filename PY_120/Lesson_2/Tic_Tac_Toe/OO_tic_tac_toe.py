@@ -82,19 +82,30 @@ class TTTGame:
             if self.is_game_over():
                 break
 
+            break
+
         self.display_board()
         self.display_results()
         self.display_goodbye_message()
 
     def display_board(self):
-        # STUB
-        # Show the board
-        pass
+        print()
+        print("     |     |")
+        print("  O  |     |  O  ")
+        print("     |     |")
+        print("-----+-----+-----")
+        print("     |     |")
+        print("     |  X  |")
+        print("     |     |")
+        print("-----+-----+-----")
+        print("     |     | ")
+        print("  X  |     | ")
+        print("     |     | ")
+        print()
 
     def display_goodbye_message(self):
-        # STUB
-        # Show a goodbye message.
-        pass
+        print("Thanks for playing Tic Tac Toe")
+
 
     def display_results(self):
         # STUB
@@ -102,8 +113,7 @@ class TTTGame:
         pass
 
     def display_welcome_message(self):
-        # STUB
-        # Show a welcome message.
+        print("Welcome to Tic Tac Toe")
         pass
 
     def first_player_moves(self):
@@ -119,11 +129,6 @@ class TTTGame:
     def second_player_moves(self):
         # STUB
         # The second player makes a move.
-        pass
-
-    def play(self):
-        # STUB
-        # Orchestrate game play.
         pass
 
 game = TTTGame()
