@@ -6,31 +6,23 @@ class Square:
     def __init__(self, marker = INITIAL_MARKER):
         self.marker = marker
 
+    @property
+    def marker(self):
+        return self._marker
+    
+    @marker.setter
+    def marker(self, marker):
+        self._marker = marker
+
     def __str__(self):
         return self.marker
 
 class Board:
     def __init__(self):
-        self.squares = {
-            1: Square("X"),
-            2: Square(" "),
-            3: Square(" "),
-            4: Square(" "),
-            5: Square("O"),
-            6: Square(" "),
-            7: Square(" "),
-            8: Square(" "),
-            9: Square("X"),
-        }
+        self.squares = {key: Square() for key in range(1, 10)}
 
-        # STUB
-        # We need a way to model the 3x3 grid. Perhaps
-        #   "squares"?
-        # What data structure should we use? A list? A
-        #   dictionary? Something else?
-        # What should the data structure store? Strings?
-        #   Numbers? Square objects?
-        pass
+    def mark_square(self, key, marker):
+        self.squares[key].marker = marker
 
     def display(self):
         print()
@@ -90,35 +82,30 @@ class Player:
 
 class Human(Player):
     def __init__(self):
-        # STUB
-        # What does a human player need to do? How does it
-        #   differ from the basic Player or a Computer?
-        pass
+        super().__init__()
 
 class Computer(Player):
     def __init__(self):
-        # STUB
-        # What does a computer player need to do? How does
-        #   it differ from the basic Player or a Human?
-        pass
+        super().__init__()
 
 class TTTGame:
 
     def __init__(self):
         self.board = Board()
+        self.human = Human()
+        self.computer = Computer()
 
     def play(self):
-        # SPIKE
         self.display_welcome_message()
 
         while True:
             self.board.display()
 
-            self.first_player_moves()
+            self.human_moves()
             if self.is_game_over():
                 break
 
-            self.second_player_moves()
+            self.computer_moves()
             if self.is_game_over():
                 break
 
@@ -138,22 +125,30 @@ class TTTGame:
 
     def display_welcome_message(self):
         print("Welcome to Tic Tac Toe")
-        pass
 
-    def first_player_moves(self):
-        # STUB
-        # The first player makes a move.
-        pass
+    def human_moves(self):
+        choice = None
+
+        while True:
+            choice = input("Choose a square between 1 and 9: ")
+            try:
+                choice = int(choice)
+                if 1 <=  choice <= 9:
+                    break
+            except ValueError:
+                pass
+            print("Sorry, that's not a valid choice.")
+            print()
+
+        self.board.mark_square(choice, Square.HUMAN_MARKER)
 
     def is_game_over(self):
         # STUB
         # We'll start by assuming the game never ends.
         return False
 
-    def second_player_moves(self):
-        # STUB
-        # The second player makes a move.
-        pass
-
+    def computer_moves(self):
+        print('Computer makes a move')
+        
 game = TTTGame()
 game.play()
