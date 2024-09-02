@@ -1,12 +1,21 @@
 class Square:
-    def __init__(self):
-        # STUB
-        # We need some way to keep track of this square's
-        #   marker.
-        pass
+    def __init__(self, marker):
+        self.marker = marker
 
 class Board:
     def __init__(self):
+        self.squares = {
+            1: "X",
+            2: " ",
+            3: " ",
+            4: " ",
+            5: "O",
+            6: " ",
+            7: " ",
+            8: " ",
+            9: " ",
+        }
+
         # STUB
         # We need a way to model the 3x3 grid. Perhaps
         #   "squares"?
@@ -15,6 +24,27 @@ class Board:
         # What should the data structure store? Strings?
         #   Numbers? Square objects?
         pass
+
+    def display(self):
+        print()
+        print("     |     |")
+        print(f"  {self.squares[1]}  |"
+              f"  {self.squares[2]}  |"
+              f"  {self.squares[3]}")
+        print("     |     |")
+        print("-----+-----+-----")
+        print("     |     |")
+        print(f"  {self.squares[4]}  |"
+              f"  {self.squares[5]}  |"
+              f"  {self.squares[6]}")
+        print("     |     |")
+        print("-----+-----+-----")
+        print("     |     |")
+        print(f"  {self.squares[7]}  |"
+              f"  {self.squares[8]}  |"
+              f"  {self.squares[9]}")
+        print("     |     |")
+        print()
 
 class Row:
     def __init__(self):
@@ -67,12 +97,15 @@ class Computer(Player):
 
 class TTTGame:
 
+    def __init__(self):
+        self.board = Board()
+
     def play(self):
         # SPIKE
         self.display_welcome_message()
 
         while True:
-            self.display_board()
+            self.board.display()
 
             self.first_player_moves()
             if self.is_game_over():
@@ -84,28 +117,12 @@ class TTTGame:
 
             break
 
-        self.display_board()
+        self.board.display()
         self.display_results()
         self.display_goodbye_message()
 
-    def display_board(self):
-        print()
-        print("     |     |")
-        print("  O  |     |  O  ")
-        print("     |     |")
-        print("-----+-----+-----")
-        print("     |     |")
-        print("     |  X  |")
-        print("     |     |")
-        print("-----+-----+-----")
-        print("     |     | ")
-        print("  X  |     | ")
-        print("     |     | ")
-        print()
-
     def display_goodbye_message(self):
         print("Thanks for playing Tic Tac Toe")
-
 
     def display_results(self):
         # STUB
