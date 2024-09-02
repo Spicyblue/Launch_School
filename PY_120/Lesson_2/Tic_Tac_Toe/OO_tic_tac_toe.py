@@ -16,6 +16,9 @@ class Square:
     def marker(self, marker):
         self._marker = marker
 
+    def is_unused(self):
+        return self.marker == Square.INITIAL_MARKER
+
     def __str__(self):
         return self.marker
 
@@ -25,6 +28,9 @@ class Board:
 
     def mark_square(self, key, marker):
         self.squares[key].marker = marker
+
+    def unused_squares(self):
+        return [key for key, square in self.squares.items() if square.is_unused()]
 
     def display(self):
         print()
@@ -65,18 +71,6 @@ class Player:
     def marker(self, value):
         self._marker = value
 
-    def mark(self):
-        # STUB
-        # We need a way to mark the board with this player's
-        #   marker. How do we access the board?
-        pass
-
-    def play(self):
-        # STUB
-        # We need a way for each player to play the game.
-        # Do we need access to the board?
-        pass
-
 class Human(Player):
     def __init__(self):
         super().__init__(Square.HUMAN_MARKER)
@@ -99,16 +93,12 @@ class TTTGame:
             self.board.display()
 
             self.human_moves()
-            self.board.display()
             if self.is_game_over():
                 break
 
             self.computer_moves()
-            self.board.display()
             if self.is_game_over():
                 break
-
-            break
 
         self.board.display()
         self.display_results()
@@ -129,10 +119,15 @@ class TTTGame:
         choice = None
 
         while True:
-            choice = input("Choose a square between 1 and 9: ")
+            valid_choice = self.board.unused_squares()
+            choices_list = [str(choice) for choice in valid_choice]
+            choice_str = ", ".join(choices_list)
+            prompt = f"Choose a square ({choice_str}): \n"
+            choice = input(prompt)
+    
             try:
                 choice = int(choice)
-                if 1 <=  choice <= 9:
+                if choice in valid_choice:
                     break
             except ValueError:
                 pass
@@ -147,7 +142,8 @@ class TTTGame:
         return False
 
     def computer_moves(self):
-        choice = rd.choice(range(1,10))
+        valid_choice = self.board.unused_squares()
+        choice = rd.choice(valid_choice)
         self.board.mark_square(choice, self.computer.marker)
         
 game = TTTGame()
