@@ -1,3 +1,5 @@
+import random as rd
+
 class Square:
     INITIAL_MARKER = " "
     HUMAN_MARKER = "X"
@@ -51,14 +53,6 @@ class Row:
         # We need some way to identify a row of 3 squares
         pass
 
-class Marker:
-    def __init__(self):
-        # STUB
-        # A marker is something that represents a board
-        #   square that belongs to a particular player. That
-        #   is, it's a square that was chosen by the player.
-        pass
-
 class Player:
     def __init__(self, marker):
         self.marker = marker
@@ -105,10 +99,12 @@ class TTTGame:
             self.board.display()
 
             self.human_moves()
+            self.board.display()
             if self.is_game_over():
                 break
 
             self.computer_moves()
+            self.board.display()
             if self.is_game_over():
                 break
 
@@ -151,7 +147,8 @@ class TTTGame:
         return False
 
     def computer_moves(self):
-        print('Computer makes a move')
+        choice = rd.choice(range(1,10))
+        self.board.mark_square(choice, self.computer.marker)
         
 game = TTTGame()
 game.play()
