@@ -108,31 +108,16 @@ class TTTGame:
         choice = rd.choice(valid_choice)
         self.board.mark_square(choice, self.computer.marker)
 
-    def play(self):
-        self.display_welcome_message()
-
-        while True:
-            self.board.display()
-
-            self.human_moves()
-            if self.is_game_over():
-                break
-
-            self.computer_moves()
-            if self.is_game_over():
-                break
-
-        self.board.display()
-        self.display_results()
-        self.display_goodbye_message()
-
     def display_goodbye_message(self):
         print("Thanks for playing Tic Tac Toe")
 
     def display_results(self):
-        # STUB
-        # Show current result.
-        pass
+        if self.is_winner(self.human):
+            print("You won! Congratulations!")
+        elif self.is_winner(self.computer):
+            print("AI will rule the world")
+        else:
+            print("A tie game.")
 
     def display_welcome_message(self):
         print("Welcome to Tic Tac Toe")
@@ -161,8 +146,40 @@ class TTTGame:
     def is_game_over(self):
         return self.board.is_full() or self.someone_won()
     
+    def is_winner(self, player):
+        for row in TTTGame.POSSIBLE_WINNING_ROWS:
+            if self.three_in_a_row(player, row):
+                return True
+    
     def someone_won(self):
+        for row in TTTGame.POSSIBLE_WINNING_ROWS:
+            if self.three_in_a_row(self.human, row):
+                return True
+            elif self.three_in_a_row(self.computer, row):
+                return True
+
         return False
+    
+    def three_in_a_row(self, player, row):
+        return self.board.count_markers_for(player, row) == 3
+
+    def play(self):
+        self.display_welcome_message()
+
+        while True:
+            self.board.display()
+
+            self.human_moves()
+            if self.is_game_over():
+                break
+
+            self.computer_moves()
+            if self.is_game_over():
+                break
+
+        self.board.display()
+        self.display_results()
+        self.display_goodbye_message()
         
 game = TTTGame()
 game.play()
