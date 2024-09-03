@@ -86,6 +86,14 @@ class TTTGame:
         self.human = Human()
         self.computer = Computer()
 
+    def board_is_full(self):
+        return False
+    
+    def computer_moves(self):
+        valid_choice = self.board.unused_squares()
+        choice = rd.choice(valid_choice)
+        self.board.mark_square(choice, self.computer.marker)
+
     def play(self):
         self.display_welcome_message()
 
@@ -137,14 +145,10 @@ class TTTGame:
         self.board.mark_square(choice, self.human.marker)
 
     def is_game_over(self):
-        # STUB
-        # We'll start by assuming the game never ends.
+        return self.board_is_full or self.someone_won()
+    
+    def someone_won(self):
         return False
-
-    def computer_moves(self):
-        valid_choice = self.board.unused_squares()
-        choice = rd.choice(valid_choice)
-        self.board.mark_square(choice, self.computer.marker)
         
 game = TTTGame()
 game.play()
