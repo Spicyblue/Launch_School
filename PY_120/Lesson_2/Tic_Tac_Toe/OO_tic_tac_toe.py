@@ -26,12 +26,6 @@ class Board:
     def __init__(self):
         self.squares = {key: Square() for key in range(1, 10)}
 
-    def mark_square(self, key, marker):
-        self.squares[key].marker = marker
-
-    def unused_squares(self):
-        return [key for key, square in self.squares.items() if square.is_unused()]
-
     def display(self):
         print()
         print("     |     |")
@@ -52,6 +46,19 @@ class Board:
               f"  {self.squares[9]}")
         print("     |     |")
         print()
+
+    def count_markers_for(self, player, keys):
+        marker = [self.squares[key].marker for key in keys ]
+        return marker.count(player.marker)
+
+    def is_full(self):
+        return len(self.unused_squares()) == 0
+
+    def mark_square(self, key, marker):
+        self.squares[key].marker = marker
+
+    def unused_squares(self):
+        return [key for key, square in self.squares.items() if square.is_unused()]
 
 class Row:
     def __init__(self):
@@ -80,15 +87,22 @@ class Computer(Player):
         super().__init__(Square.COMPUTER_MARKER)
 
 class TTTGame:
+    POSSIBLE_WINNING_ROWS = (
+        (1, 2, 3),  # top row of board
+        (4, 5, 6),  # center row of board
+        (7, 8, 9),  # bottom row of board
+        (1, 4, 7),  # left column of board
+        (2, 5, 8),  # middle column of board
+        (3, 6, 9),  # right column of board
+        (1, 5, 9),  # diagonal: top-left to bottom-right
+        (3, 5, 7),  # diagonal: top-right to bottom-left
+    )
 
     def __init__(self):
         self.board = Board()
         self.human = Human()
         self.computer = Computer()
 
-    def board_is_full(self):
-        return False
-    
     def computer_moves(self):
         valid_choice = self.board.unused_squares()
         choice = rd.choice(valid_choice)
@@ -145,7 +159,7 @@ class TTTGame:
         self.board.mark_square(choice, self.human.marker)
 
     def is_game_over(self):
-        return self.board_is_full or self.someone_won()
+        return self.board.is_full() or self.someone_won()
     
     def someone_won(self):
         return False
