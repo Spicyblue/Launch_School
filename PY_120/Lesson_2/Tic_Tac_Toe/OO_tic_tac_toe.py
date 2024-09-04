@@ -70,12 +70,6 @@ class Board:
         return [key for key, square in self.squares.items()
                 if square.is_unused()]
 
-class Row:
-    def __init__(self):
-        # STUB
-        # We need some way to identify a row of 3 squares
-        pass
-
 class Player:
     def __init__(self, marker):
         self.marker = marker
