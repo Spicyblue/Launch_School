@@ -1,7 +1,5 @@
 '''
-Example 2.
-
-Circular Buffer
+Circular Buffer.
 A circular buffer is a collection of objects stored in a buffer that is treated 
 as though it is connected end-to-end in a circle.
 When an object is added to this circular buffer, it is added to the position that
