@@ -14,6 +14,10 @@
 - Solution to assigments and small problem exercises related to the course are also contained here.
 - Additional exercises with codewars level 4,5, 6 and 7 Kyu also available here and were helpful in preparing for the interview.
 
-#### PY120 and PY129 (August 2024 - )
+#### PY120 and PY129 (August 2024 - September 2024)
 
 - Core focus on Object Oriented Programming.
+- Strong fondation on core concept of OOP such as Encapsulation, Polymorphism, Inheritance and Collabboration.
+- Elaboration on custom methods, custom classes, magic methods and using python built-in-modules.
+- Solution to assignments and small problems exercises related to the course are also contained here.
+- Mini project RPS in OOP.
