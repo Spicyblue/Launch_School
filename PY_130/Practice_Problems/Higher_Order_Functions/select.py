@@ -1,4 +1,5 @@
 '''
+Select.
 Write a select function that mimics the built-in filter function.
 Your select function should take two arguments: a callback function and an iterable object.
 It should return a list of all the elements of the iterable for
@@ -36,7 +37,6 @@ short_color_names = select(lambda color: len(color) <= 5, colors)
 print(short_color_names)      # ['blue', 'red', 'green']
 # The order of the colors may vary, but should include the
 # indicated colors.
-
 
 # using comprehension
 def select2(callback, iterable):
