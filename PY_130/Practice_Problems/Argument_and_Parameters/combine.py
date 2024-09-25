@@ -7,7 +7,7 @@ Call this function with three different values.
 
 # Solution
 
-def combine(name, age, height, /):
+def combine(name, age, height):
     return (name, age, height)
 
 print(combine('Harry', '20', '174cm'))
