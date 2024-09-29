@@ -1,6 +1,6 @@
 '''
 Lengths of Strings.
-Use map to create a list of lengths of each string in the original list..
+Use map to create a list of lengths of each string in the original list.
 '''
 
 # Solution
