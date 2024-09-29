@@ -1,6 +1,6 @@
 '''
 Even Numbers.
-Obtain only the even numbers from a list using the filter function..
+Obtain only the even numbers from a list using the filter function.
 '''
 
 # Solution
