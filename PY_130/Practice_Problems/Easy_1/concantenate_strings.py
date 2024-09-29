@@ -1,5 +1,5 @@
 '''
-Concatenate Strings
+Concatenate Strings.
 Use reduce to concatenate a list of strings into a single string.
 '''
 

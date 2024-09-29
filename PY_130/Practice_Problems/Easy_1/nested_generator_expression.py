@@ -1,5 +1,5 @@
 '''
-Nested Generator Expressions
+Nested Generator Expressions.
 Use nested generator expressions to create a flat list of numbers from a list of lists.
 '''
 
