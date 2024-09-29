@@ -15,7 +15,7 @@ print(lst_product)
 # from functools import reduce
 # product = reduce(lambda x, y: x * y, [1, 2, 3, 4])
 
-# Solution2
+# Solution 2
 # from functools import reduce
 # def multiply(x, y):
 #     return x * y
