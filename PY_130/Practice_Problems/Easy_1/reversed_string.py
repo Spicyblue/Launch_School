@@ -15,7 +15,6 @@ generator_unwierd_string = (rewind_string(wierd_string))
 for char in generator_unwierd_string:
     print(char)
 
-
 def rewind_string2(string_input):
     yield string_input[::-1]
 
@@ -27,8 +26,6 @@ for char in generator_unwierd_string:
 
 ## LS Solution ##
 # string = "Hello"
-
 # reverse_generator = (string[i] for i in range(len(string) - 1, -1, -1))
-
 # for char in reverse_generator:
 #     print(char)
