@@ -1,6 +1,7 @@
 '''
 Ignore Middle.
-Unpack values from a tuple of four elements, but only keep the first and last values.
+Unpack values from a tuple of four elements,
+but only keep the first and last values.
 '''
 
 # Solution
