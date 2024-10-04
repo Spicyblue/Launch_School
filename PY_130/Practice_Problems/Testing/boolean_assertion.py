@@ -9,8 +9,8 @@ import unittest
 class TestBolean(unittest.TestCase):
 
     def test_boolean(self):
-        self.value = 10
-        self.assertTrue(self.value % 2 != 0, 'Modulus is zero')
+        value = 11
+        self.assertTrue(value % 2 != 0, 'Modulus is zero')
 
 if __name__ == '__main__':
     unittest.main()
