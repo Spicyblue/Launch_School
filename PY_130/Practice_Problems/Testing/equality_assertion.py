@@ -6,9 +6,9 @@ Write a unittest assertion that will fail if value.lower does not return 'xyz'.
 # Solution
 import unittest
 
-class TestBolean(unittest.TestCase):
+class Test(unittest.TestCase):
 
-    def test_boolean(self):
+    def test_equality(self):
         value = 'XYZ'
         self.assertEqual('xyz', value.lower(), 'Objects are not the same ')
 

@@ -6,9 +6,9 @@ Write a unittest assertion that will fail if the 'xyz' is not in the list lst.
 # Solution
 import unittest
 
-class TestBolean(unittest.TestCase):
+class Test(unittest.TestCase):
 
-    def test_boolean(self):
+    def test_object_in_collection(self):
         lst = ['xyz', 'notxyz', 'others']
         self.assertIn('xyz', lst)
 
