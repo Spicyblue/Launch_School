@@ -140,25 +140,15 @@ if __name__ == "__main__":
 
 ## LS Solution ##
 
-# class Triangle:
-#     def __init__(self, side1, side2, side3):
-#         self.sides = [side1, side2, side3]
-#         if not self._is_valid():
-#             raise ValueError("Invalid triangle lengths")
+# class DNA:
+#     def __init__(self, strand):
+#         self.strand = strand
 
-#     @property
-#     def kind(self):
-#         if len(set(self.sides)) == 1:
-#             return "equilateral"
-#         elif len(set(self.sides)) == 2:
-#             return "isosceles"
-#         else:
-#             return "scalene"
+#     def hamming_distance(self, comparison):
+#         differences = 0
 
-#     def _is_valid(self):
-#         return (
-#             all(side > 0 for side in self.sides)
-#             and self.sides[0] + self.sides[1] > self.sides[2]
-#             and self.sides[1] + self.sides[2] > self.sides[0]
-#             and self.sides[0] + self.sides[2] > self.sides[1]
-#         )
+#         for char1, char2 in zip(self.strand, comparison):
+#             if char1 != char2:
+#                 differences += 1
+
+#         return differences
