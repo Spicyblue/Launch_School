@@ -1,3 +1,4 @@
+import unittest
 '''
 Triangles.
 Write a program to determine whether a triangle is equilateral, isosceles, or scalene.
@@ -46,7 +47,7 @@ Algorithm:
 
 
     Lowend:
-        - Define a class Triangles with three paramaeters.
+        - Define a class Triangles which accepts three argument using the Triangle constructor.
         - Creat a local variable triangle_sides that is a list with 
           its element as arguments(sides) of the Triangles class.
         - Check if the sum of any two sides is great the third:
@@ -84,11 +85,7 @@ class Triangle:
             return 'isosceles'
         else:
             return 'scalene'
-
-
-import unittest
-#from triangle import Triangle
-
+        
 class TestTriangle(unittest.TestCase):
     def test_equilateral_equal_sides(self):
         triangle = Triangle(2, 2, 2)
