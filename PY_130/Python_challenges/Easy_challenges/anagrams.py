@@ -42,7 +42,6 @@ Algorithm:
     - Check which are words in the list are anagrams of the main word.
     - Return a sublist containing only those anagrams present.
 
-
     Lowend:
         - Define a class Anagram which has accepts a string using the Anagram constructor. 
         - Convert the argument passed to lowercases using casefold and set this to an instance _word.
@@ -70,26 +69,8 @@ class Anagram:
                 print(word)
                 anagrams.append(word)
 
-
     def sorted_string(self, string):
         return "".join(sorted(string.lower()))
-
-class Anagram:
-    def __init__(self, word):
-        self.word = word.lower()
-
-    def match(self, word_list):
-        return [
-            ana
-            for ana in word_list
-            if ana.lower() != self.word and self._is_anagram(ana, self.word)
-        ]
-
-    def _sorted_letters(self, string):
-        return "".join(sorted(string.lower()))
-
-    def _is_anagram(self, word1, word2):
-        return self._sorted_letters(word1) == self._sorted_letters(word2)
 
 class TestAnagram(unittest.TestCase):
     def test_no_matches(self):
