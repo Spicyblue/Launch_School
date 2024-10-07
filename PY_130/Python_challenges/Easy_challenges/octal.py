@@ -1,6 +1,6 @@
 import unittest
 '''
-Octal
+Octal.
 Implement octal to decimal conversion.
 Given an octal input string, your program should produce a decimal output.
 Treat invalid input as octal 0.
@@ -175,7 +175,6 @@ class OctalTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
 
 ## LS Solution ##
 # class Octal:
