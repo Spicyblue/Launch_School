@@ -54,12 +54,6 @@ Data Structure:
 Class with class variables and methods.
 
 Algorithm:
-    Highend
-    - Get Meetups with year and day.
-    - Get the exact date for the meetup
-    - Return the exact date.
-
-    Lowend:
     - See the Implicit ideas
 '''
 
