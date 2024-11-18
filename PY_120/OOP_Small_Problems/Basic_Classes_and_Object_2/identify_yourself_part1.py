@@ -68,3 +68,4 @@ print(kitty.identify())
 # <__main__.Cat object at 0x10508c8d0>
 # The object ID (0x105...) may vary
 # # Comments show expected output
+
