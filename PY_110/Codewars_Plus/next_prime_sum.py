@@ -107,6 +107,3 @@ print(solution(734, 735) == [])
 
 # Note!
 # Time take to write PEDAC and test/debug code 12 mins 23 seconds
-
-
-# other solutions

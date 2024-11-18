@@ -128,6 +128,3 @@ print(solution(734, 735) == [])
 #             result.append(sequence)
 
 #     return result
-
-
-

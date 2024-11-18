@@ -115,5 +115,3 @@ print(next_smaller(1234567908) == 1234567890)
 
 ## LS Answer ##
 # Not Available
-
-
