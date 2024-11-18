@@ -18,6 +18,7 @@ for word in split_advice:
 new_advice = " ".join(new_advice)
 
 print(new_advice)
+
     
 
 
