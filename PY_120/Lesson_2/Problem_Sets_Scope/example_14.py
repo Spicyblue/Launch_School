@@ -38,4 +38,4 @@ print(b.var_a)
 ## LS Solution ##   
 # The code will raise an AttributeError if you were to run it.
 # Since B.__init__ doesn't call super().__init__,
-# b knows nothing about the var_a instance variable.a
+# b knows nothing about the var_a instance variable.
