@@ -161,4 +161,4 @@ run_calculator()
 time.sleep(3)
 
 # Clears screen.
-clear_screen() 
+clear_screen()
