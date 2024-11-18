@@ -109,4 +109,4 @@ print(rotate_list2([]) == [])
 #     if len(lst) == 0:
 #         return []
 
-#     return lst[1:] + [lst[0]]
+#     return lst[1:] + [lst[0]] 
