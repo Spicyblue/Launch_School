@@ -15,7 +15,8 @@
 # the light can be turned on or off using either the switch at the bottom of the stairs or
 # the switch at the top of the stairs. Think of some additional examples.
 
-# or and and are so-called short circuit operators in that the second operand is not evaluated if its value is not needed. 
+# or and and are so-called short circuit operators in that the 
+# second operand is not evaluated if its value is not needed. 
 # Does the xor function perform short-circuit evaluation of its operands? Why or why not? 
 # Does short-circuit evaluation in xor operations even make sense?
 
