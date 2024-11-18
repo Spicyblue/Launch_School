@@ -20,5 +20,3 @@ def update_dictionary(dict_entry, new_dict_to_add):
 
 new_ages = update_dictionary(ages,additional_ages)
 print(new_ages)
-
-
