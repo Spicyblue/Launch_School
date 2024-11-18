@@ -90,3 +90,4 @@ print(calculate_leftover_blocks(4) == 3)  # True
 print(calculate_leftover_blocks(5) == 0)  # True
 print(calculate_leftover_blocks(6) == 1)  # True
 print(calculate_leftover_blocks(14) == 0) # True
+
