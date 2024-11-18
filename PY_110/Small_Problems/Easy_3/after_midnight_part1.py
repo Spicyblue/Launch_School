@@ -1,4 +1,3 @@
-
 '''
 After Midnight (Part 1).
 The time of day can be represented as the number of minutes before or after midnight.
