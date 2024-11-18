@@ -1,0 +1,231 @@
+'''
+Exercise 4
+Add a class method to your Car class that calculates and
+prints any car's average gas mileage (miles per gallon).
+You can compute the mileage by dividing
+the distance traveled (in miles) by the fuel burned (in gallons).
+'''
+
+# Solution
+
+class ModelCar:
+
+    def __init__(self, model, year, color, speed = 0):
+
+        self.model = model
+        self.year = year
+        self.color = color
+        self.speed = speed
+    
+    @classmethod
+    def mileage(cls, distance, gallon):
+        print('Class method in process')
+        average_mileage = distance / gallon
+        return f'The average distance convered is {average_mileage} mpg'
+    
+    @property
+    def color(self):
+        print('Getter Colour in process')
+        return f"The current model color is {self._color}"
+
+    @color.setter
+    def color(self, color):
+        print('Setter Colour in process')
+
+        if not isinstance(color, str):
+            return 'Colour must be alphabetic'
+
+        self._color = color
+    
+    @property
+    def get_model(self):
+        print('Getter Model in process')
+        return f"The current model is {self.model}"
+
+    @property
+    def get_year(self):
+        print('Getter Year in process')
+        return f"The current model year is {self.year}"
+
+    def spray(self, new_color):
+        self._new_color = new_color
+        print('Setter Spray in process')
+        return f"The new spray color is {self._new_color}"
+
+    def engine_on(self):
+        print('Getter Engine_on in process')
+        self.speed += 1
+        return f"The {self.model} is Turning on"
+
+    def engine_off(self):
+        print('Getter Engine_off in process')
+        self.speed = 0
+    
+    def accelerate(self):
+        print('Getter Acceleration in process')
+        self.speed += 5
+
+    def brake(self):
+        print('Getter Brake in process')
+        self.speed -= 3
+            
+    def current_speed(self):
+        print('Getter Current speed in process')
+        return f'The current speed of your {self.color} {self.model} is {self.speed}'
+
+my_car = ModelCar('Telsa', 2027, 'sky blue')
+
+print(my_car.current_speed())
+# outputs
+# Getter Current speed in process
+# The current speed of your sky blue Telsa is 0
+
+my_car.engine_on()      # speed increase by 1
+my_car.accelerate()     # speed increase by 5
+my_car.accelerate()     # speed increase by 5
+
+print(my_car.current_speed())
+# outputs
+# Getter Current speed in process
+# The current speed of your sky blue Telsa is 11
+
+my_car.brake()          # speed decreases by 3
+my_car.brake()          # speed decreases by 3
+
+print(my_car.current_speed())
+# outputs
+# Getter Current speed in process
+# The current speed of your sky blue Telsa is 5
+
+my_car.engine_off()     # speed set to 0
+
+print(my_car.current_speed())
+# outputs
+# Getter Current speed in process
+# The current speed of your sky blue Telsa is 0
+
+print(my_car.get_model)
+# outputs
+# Getter Model in process
+# The current model is Telsa
+
+print(my_car.get_year)
+# outputs
+# Getter Model in process
+# The current model year is 2027
+
+print(my_car.color)
+# outputs
+# Getter Colour in process
+# The current model color is sky blue
+
+my_car.color = 'royal gold'
+# outputs
+# Setter Colour in process
+
+print(my_car.color)
+# outputs
+# Getter Colour in process
+# The current model color is royal gold
+
+print(my_car.spray('Purple lime'))
+# outputs
+# Setter Spray in process
+# The new spray color is Purple lime
+
+print(my_car.mileage(149, 10))
+# outputs
+# Class method in process
+# The average distance convered is 14.9 mpg
+
+## LS Answer ##
+
+# class Car:
+
+#     def __init__(self, model, year, color):
+#         self._model = model
+#         self._year = year
+#         self._color = color
+#         self.speed = 0
+
+#     @property
+#     def color(self):
+#         return self._color
+
+#     @color.setter
+#     def color(self, color):
+#         self._color = color
+
+#     @property
+#     def model(self):
+#         return self._model
+
+#     @property
+#     def year(self):
+#         return self._year
+    
+#     @classmethod
+#     def gas_mileage(cls, gallons, miles):
+#         mileage = miles / gallons
+#         print(f'{mileage} miles per gallon')
+
+#     def spray_paint(self, color):
+#        self.color = color
+#        print(f'Your {color} paint job looks great!')
+
+#     def engine_start(self):
+#         print('The engine is on!')
+
+#     def engine_off(self):
+#         self.speed = 0
+#         print("Let's park this baby!")
+#         print('The engine is off!')
+
+#     def speed_up(self, number):
+#         self.speed += number
+#         print(f'You accelerated {number} mph.')
+
+#     def brake(self, number):
+#         self.speed -= number
+#         print(f'You decelerated {number} mph.')
+
+#     def get_speed(self):
+#         print(f'Your speed is {self.speed} mph.')
+
+# lumina = Car('chevy lumina', 1997, 'white')
+
+# lumina.engine_start() # The engine is on!
+# lumina.get_speed()    # Your speed is 0 mph.
+# lumina.speed_up(20)   # You accelerated 20 mph.
+# lumina.get_speed()    # Your speed is 20 mph.
+# lumina.speed_up(30)   # You accelerated 30 mph.
+# lumina.get_speed()    # Your speed is 50 mph.
+# lumina.brake(15)      # You decelerated 15 mph.
+# lumina.get_speed()    # Your speed is 35 mph.
+# lumina.brake(30)      # You decelerated 30 mph.
+# lumina.get_speed()    # Your speed is 5 mph.
+# lumina.engine_off()   # Let's park this baby!
+#                       # The engine is off
+# lumina.get_speed()    # Your speed is 0 mph.
+# print(f'My car is {lumina.color}.')
+# My car is white.
+
+# print(f"My car's model is a {lumina.model}.")
+# # My car's model is a chevy lumina.
+
+# print(f"My car's year is {lumina.year}.")
+# # My car's year is 1997.
+
+# lumina.color = 'brown'
+# print(f'My car is now {lumina.color}.')
+# # My car is now brown.
+
+# lumina.year = 2023  # Do not unhighlight this code
+# # AttributeError: property 'year' of 'Car' object
+# # has no setter
+
+# lumina.spray_paint('red')
+# Your red paint job looks great!
+
+# Car.gas_mileage(13, 351)
+# 27.0 miles per gallon
