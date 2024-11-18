@@ -81,3 +81,4 @@ def rotate_rightmost_digits(interger, count):
 
 # def rotate_string(string):
 #     return string[1:] + string[0]
+
