@@ -110,4 +110,3 @@ print(triangle(50, 50, 50) == "invalid")    # True
 #         return get_triangle_type(angles)
 #     else:
 #         return "invalid"
-
