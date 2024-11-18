@@ -95,3 +95,4 @@ print(Boat.vehicles())    # 8
 
 #     def __init__(self):
 #         super().__init__()
+
