@@ -34,4 +34,3 @@ How is this done?
 # self refers to the object referenced by small_car. In this case, that's a Car object.
 # self.__class__ returns a reference to the Car class, which is an object of type class.
 # Finally, self.__class__.__name__ returns the name of the Car class as a string: 'Car'.
-

@@ -71,4 +71,3 @@ truck.go_fast()         # outputs I am a super fast Truck
 # small_car.go_fast()  # I am a super fast Car!
 
 # As you can see we can now go fast in our Car and Truck.
-

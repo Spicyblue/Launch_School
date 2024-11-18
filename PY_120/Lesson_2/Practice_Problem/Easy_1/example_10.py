@@ -67,5 +67,3 @@ print(Cat.cats_count())         # 2
 
 # Cat('shorthair')
 # print(Cat.cats_count())                 # 3
-
-
