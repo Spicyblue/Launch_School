@@ -61,3 +61,4 @@ print(sum_digits2(123456789) == 45)      # True
 # def sum_digits(number):
 #     digits = [int(digit) for digit in str(number)]
 #     return sum(digits)
+
