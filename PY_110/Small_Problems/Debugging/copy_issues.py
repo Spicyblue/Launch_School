@@ -47,4 +47,3 @@ print(copied[0] == [1])
 
 # print(copied[0] == [1])  # True
 
-

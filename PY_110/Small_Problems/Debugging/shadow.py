@@ -37,4 +37,3 @@ print(total(numbers, 2) == 20)
 
 # numbers = [1, 2, 3, 4]
 # print(multiply_sum(numbers, 2) == 20) # True
-
