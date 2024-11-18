@@ -31,5 +31,3 @@ Kitty = Cat()
 #         print("I'm a cat!")
 
 # kitty = Cat()
-
-

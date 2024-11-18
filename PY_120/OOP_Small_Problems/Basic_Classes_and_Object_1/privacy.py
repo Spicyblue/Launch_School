@@ -52,4 +52,3 @@ kitty.greet()       # Outputs Hello! My name is Sophie!
 
 # kitty = Cat('Sophie')
 # kitty.greet()
-
