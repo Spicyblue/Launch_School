@@ -89,5 +89,3 @@ print(bob.name == rob.name)
 #         self._last_name = last_name
 
 # print(bob.name == rob.name)
-
-
