@@ -11,5 +11,4 @@ numbers.clear()
 while numbers:
     numbers.pop()
 
-
 print(numbers)

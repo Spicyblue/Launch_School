@@ -20,4 +20,3 @@ print(my_list1)
 # my_list1[0] and my_list2[0] point to the same dictionary, { first: "value1" }.
 # Thus, when we replace the value of the first property by using my_list2[0]['first'], 
 # the change shows up in my_list1 as well. 
-
