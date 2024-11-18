@@ -41,3 +41,4 @@ print(merged_wallet.amount == 80)       # Tru
 #             return Wallet(self.amount + other.amount)
 
 #         return NotImplemented
+

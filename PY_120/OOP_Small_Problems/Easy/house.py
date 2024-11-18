@@ -90,3 +90,4 @@ if home2 > home1:
 #             return self._price < other._price
 
 #         return NotImplemented
+

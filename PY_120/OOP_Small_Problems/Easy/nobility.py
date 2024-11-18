@@ -128,4 +128,3 @@ print(flash.walk())     # Expected: "Flash runs forward"
 
 #     def gait(self):
 #         return "struts"
-

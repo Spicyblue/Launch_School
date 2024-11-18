@@ -53,3 +53,4 @@ print(merged_wallet)          # Wallet with $80.
 
 #     def __str__(self):
 #         return f"Wallet with ${self.amount}."
+
