@@ -10,3 +10,4 @@ print(lst_string)
 
 ## LS Solution ##
 # no_none = list(filter(None, [1, None, 2, None, 3]))
+

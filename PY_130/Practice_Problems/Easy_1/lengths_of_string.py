@@ -11,3 +11,4 @@ print(lst_string_len)
 
 ## LS Solution ##
 # lengths = list(map(len, ["apple", "banana", "cherry"]))
+
