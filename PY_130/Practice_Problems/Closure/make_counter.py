@@ -38,4 +38,3 @@ print(increment_counter())
 # Since counter is initialized inside the function returned by make_counter,
 # closure plays no part in its execution.
 # Instead, counter gets initialized to 0 each time we call incrementCounter.
-
