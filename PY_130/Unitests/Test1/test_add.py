@@ -9,3 +9,4 @@ if __name__ == '__main__':
     print('Starting test')
     unittest.main()
     print('Test ended')
+
