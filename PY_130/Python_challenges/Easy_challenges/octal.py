@@ -195,3 +195,4 @@ if __name__ == "__main__":
 
 #     def _valid_octal(self, num):
 #         return all(char.isdigit() and "0" <= char <= "7" for char in num)
+

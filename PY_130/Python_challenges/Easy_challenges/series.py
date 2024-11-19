@@ -157,3 +157,4 @@ if __name__ == "__main__":
 
 #         numbers = [int(char) for char in self.number_string]
 #         return [numbers[idx : idx + length] for idx in range(len(numbers) - length + 1)]
+
