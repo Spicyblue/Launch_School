@@ -171,5 +171,3 @@ if __name__ == '__main__':
 #         letters = ''.join(random.choices(string.ascii_uppercase, k=2))
 #         numbers = ''.join(random.choices(string.digits, k=3))
 #         return letters + numbers
-
-

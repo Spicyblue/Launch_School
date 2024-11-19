@@ -165,3 +165,4 @@ if __name__ == '__main__':
 #         if letter == 'A':
 #             return 1
 #         return 2 * (ord(letter) - ord('A')) + 1
+
