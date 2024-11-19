@@ -20,4 +20,11 @@
 - Strong fondation on core concept of OOP such as Encapsulation, Polymorphism, Inheritance and Collabboration.
 - Elaboration on custom methods, custom classes, magic methods and using python built-in-modules.
 - Solution to assignments and small problems exercises related to the course are also contained here.
-- Mini project RPS in OOP.
+- Mini project (Programming Rock Paper Scissors in Object Oritented Programming)
+
+#### LS170 and LS171 (September 2024 - November 2024)
+
+- Core focus on basic network infrastructure and protocols within different network layers.
+- Basic Foundation of Network Models (TCP/IP AND OSI).
+- Introduction to Internet, HTTP (request/response) cycle, HTTPS( TLS security) which forms the basis for network application.
+- Mini project on setting up a basic https server.
