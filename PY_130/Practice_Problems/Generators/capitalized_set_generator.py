@@ -10,4 +10,4 @@ string = ['africa', 'america', 'europe', 'asia', 'antartica',]
 
 capitalized_set = set((word.capitalize() for word in string if len(word) >= 5))
 
-print(capitalized_set)
+print(capitalized_set) 

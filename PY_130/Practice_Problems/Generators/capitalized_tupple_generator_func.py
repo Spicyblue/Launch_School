@@ -14,4 +14,3 @@ def capitalizing_tupple(lst):
 string = ['africa', 'america', 'europe', 'asia', 'antartica']
 capitalized_tupple = tuple(capitalizing_tupple(string))
 print(capitalized_tupple)
-

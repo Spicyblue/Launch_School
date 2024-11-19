@@ -15,4 +15,4 @@ def capitalizing_set(lst):
 
 string = ['africa', 'america', 'europe', 'asia', 'antartica']
 capitalized_set = set(capitalizing_set(string))
-print(capitalized_set)
+print(capitalized_set) 
