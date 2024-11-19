@@ -152,4 +152,3 @@ longest_sentence("To be or not to be! Is that the question?")
 # \w - starts with any word character
 # .*? - may contain any number of characters in the middle (even zero characters)
 # [.!?] - ends when the first ., !, or ? after the starting word character is reached
-
