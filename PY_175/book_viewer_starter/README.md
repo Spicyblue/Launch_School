@@ -20,9 +20,15 @@ Redirects users to the homepage for invalid routes.
 1. Clone this repository:
 
     ```console
-    git clone https://github.com/Spicyblue/Launch_School/tree/fedb3c2883b9760a9fb64f087ad31f1b5e53474b/PY_175/book_viewer_starter
-    cd book-viewer
+    git clone https://github.com/Spicyblue/Launch_School.git
     ```
+
+    Once the cloning process is complete, navigate into the specific directory:
+
+    ```console
+    cd Launch_School/PY_175/book_viewer_starter
+    ```
+
 
 2. Install Dependencies:  
     Necessary dependencies includes Poetry, Flasks and Python(Version 3.9 and above) The application was developed using python3.12
