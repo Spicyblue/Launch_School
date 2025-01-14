@@ -15,7 +15,6 @@
 -- Keep in mind that all rows in the table should always contain all three values.
 
 -- Solution 
-
 CREATE TABLE temperatures(
     date date NOT NULL,
     low integer NOT NULL,
