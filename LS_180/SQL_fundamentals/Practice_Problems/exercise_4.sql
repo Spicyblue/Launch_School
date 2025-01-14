@@ -13,7 +13,7 @@
 --  2016-03-08 | 23  | 31
 --  2016-03-09 | 17  | 28
 
-INSERT INTO temperature(date, low, high )
+INSERT INTO temperatures(date, low, high )
             VALUES  ('2016-03-01', 34, 43),
                     ('2016-03-02', 32, 44),
                     ('2016-03-03', 31, 47),
