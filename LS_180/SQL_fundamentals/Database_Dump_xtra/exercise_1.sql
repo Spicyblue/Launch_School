@@ -1,0 +1,2 @@
+-- Exercise 1
+-- Create a new database called residents using the PostgreSQL command line tools.
