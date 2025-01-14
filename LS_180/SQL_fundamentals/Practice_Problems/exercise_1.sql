@@ -1,5 +1,4 @@
 -- Exercise 1
-
 -- What is the result of using an operator on a NULL value?
 
 -- Solution 
