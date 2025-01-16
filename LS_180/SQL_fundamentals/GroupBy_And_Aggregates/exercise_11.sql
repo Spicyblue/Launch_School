@@ -18,5 +18,4 @@
 
 -- Solution
 
-SELECT genre, SUM(duration) as total_duration from films GROUP by genre ORDER BY total_duration
- ASC;
+SELECT genre, SUM(duration) as total_duration from films GROUP by genre ORDER BY total_duration ASC;
